@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Shree Sahaj Naturopathy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    body { font-family: 'Lato', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .quote-bg {
+      background-image: url('images/buddha_background3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+@keyframes underlineGrowCenter {
+  0% {
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+.underline-animate-center::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0%;
+  background-color: #15803d; /* green-700 */
+  animation: underlineGrowCenter 0.6s ease-out forwards;
+}
+
+
+  </style>
+</head>
+<body class="bg-green-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed w-full z-50 bg-green-100 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center px-2 py-4 gap-2 md:gap-0">
+      <div class="flex items-center gap-4">
+        <img src="images/Brandlogo_SSNC.jpg" alt="SSNC Logo" class="h-16 w-auto rounded-full shadow-md">
+        <span class="text-xl sm:text-2xl md:text-3xl font-bold text-green-800 tracking-wide font-serif">Shree Sahaj Naturopathy & Yoga Center</span>
+      </div>
+      <nav class="space-x-4 text-green-800 font-medium text-sm sm:text-base mt-2 md:mt-0">
+        <a href="index.html">Home</a>
+        <a href="about.html" >About</a>
+        <a href="services.html" class="text-green-900 font-semibold">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="Education.html">Education</a>
+        <a href="Consultation.html">Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+
+<!-- Services Section -->
+<section class="bg-green-50 pt-32 pb-20 px-4 md:px-12">
+  <h2 class="text-4xl font-bold text-center text-green-800 mb-12">Our Services</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- 1. Hydrotherapy -->
+    <div class="bg-white p-6 rounded-lg shadow-md border border-green-200">
+      <button onclick="toggleService('hydrotherapy')" class="text-xl font-semibold text-green-800 w-full text-left flex items-center gap-4">
+        <img src="images/hydrotherapy.jpg" alt="Hydrotherapy" id="img-hydrotherapy" class="w-16 h-16 rounded-md object-cover service-image" />
+        <span>Hydrotherapy</span>
+      </button>
+      <div id="hydrotherapy" class="mt-4 text-gray-700 text-base hidden service-detail">
+        <p><strong>What is it?</strong><br>
+        Hydrotherapy involves the use of water at varying temperatures and pressures to relieve pain, improve circulation, and promote overall healing.</p>
+        <p class="mt-2"><strong>How it helps:</strong></p>
+        <ul class="list-disc pl-5 space-y-1 mt-1">
+          <li>Reduces muscle tension and joint pain</li>
+          <li>Stimulates blood flow and detoxification</li>
+          <li>Calms the nervous system</li>
+          <li>Boosts immunity through contrast bathing and steam treatments</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. Mud Therapy -->
+    <div class="bg-white p-6 rounded-lg shadow-md border border-green-200">
+      <button onclick="toggleService('mudtherapy')" class="text-xl font-semibold text-green-800 w-full text-left flex items-center gap-4">
+        <img src="images/mudtherapy.jpg" alt="Mud Therapy" id="img-mudtherapy" class="w-16 h-16 rounded-md object-cover service-image" />
+        <span>Mud Therapy</span>
+      </button>
+      <div id="mudtherapy" class="mt-4 text-gray-700 text-base hidden service-detail">
+        <p><strong>What is it?</strong><br>Mud therapy uses natural, mineral-rich mud applied to the body to cool, heal, and detoxify the body.</p>
+        <p class="mt-2"><strong>How it helps:</strong></p>
+        <ul class="list-disc pl-5 space-y-1 mt-1">
+          <li>Removes toxins and soothes inflammation</li>
+          <li>Treats skin conditions like acne and eczema</li>
+          <li>Improves digestion and regulates metabolism</li>
+          <li>Relaxes muscles and balances body temperature</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Yoga Sessions -->
+    <div class="bg-white p-6 rounded-lg shadow-md border border-green-200">
+      <button onclick="toggleService('yogasessions')" class="text-xl font-semibold text-green-800 w-full text-left flex items-center gap-4">
+        <img src="images/yogasessions.jpg" alt="Yoga Sessions" id="img-yogasessions" class="w-16 h-16 rounded-md object-cover service-image" />
+        <span>Yoga Sessions</span>
+      </button>
+      <div id="yogasessions" class="mt-4 text-gray-700 text-base hidden service-detail">
+        <p><strong>What is it?</strong><br>Personalized yoga sessions blending postures, breathing techniques, and meditation to harmonize the body and mind.</p>
+        <p class="mt-2"><strong>How it helps:</strong></p>
+        <ul class="list-disc pl-5 space-y-1 mt-1">
+          <li>Improves flexibility, strength, and posture</li>
+          <li>Reduces stress and improves sleep</li>
+          <li>Manages chronic conditions like diabetes</li>
+          <li>Promotes emotional and spiritual well-being</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. 3rd Eye Healing -->
+    <div class="bg-white p-6 rounded-lg shadow-md border border-green-200">
+      <button onclick="toggleService('thirdEye')" class="text-xl font-semibold text-green-800 w-full text-left flex items-center gap-4">
+        <img src="images/thirdEye.jpg" alt="3rd Eye Healing" id="img-thirdEye" class="w-16 h-16 rounded-md object-cover service-image" />
+        <span>3rd Eye Healing</span>
+      </button>
+      <div id="thirdEye" class="mt-4 text-gray-700 text-base hidden service-detail">
+        <p><strong>What is it?</strong><br>Focuses on activating the third eye through neurobic exercises, guided meditation, and sensory techniques.</p>
+        <p class="mt-2"><strong>How it helps:</strong></p>
+        <ul class="list-disc pl-5 space-y-1 mt-1">
+          <li>Boosts focus, memory, and clarity</li>
+          <li>Encourages spiritual growth</li>
+          <li>Improves mental health and emotional stability</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. Acupressure -->
+    <div class="bg-white p-6 rounded-lg shadow-md border border-green-200">
+      <button onclick="toggleService('acupressure')" class="text-xl font-semibold text-green-800 w-full text-left flex items-center gap-4">
+        <img src="images/Accupressure.jpg" alt="Acupressure" id="img-acupressure" class="w-16 h-16 rounded-md object-cover service-image" />
+        <span>Acupressure</span>
+      </button>
+      <div id="acupressure" class="mt-4 text-gray-700 text-base hidden service-detail">
+        <p><strong>What is it?</strong><br>Uses gentle pressure on specific points to relieve blockages and restore energy flow.</p>
+        <p class="mt-2"><strong>How it helps:</strong></p>
+        <ul class="list-disc pl-5 space-y-1 mt-1">
+          <li>Relieves chronic pain and stress</li>
+          <li>Improves circulation and digestion</li>
+          <li>Supports hormone balance and sleep quality</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. Physio Therapy -->
+    <div class="bg-white p-6 rounded-lg shadow-md border border-green-200">
+      <button onclick="toggleService('physiotherapy')" class="text-xl font-semibold text-green-800 w-full text-left flex items-center gap-4">
+        <img src="images/physiotherapy.jpg" alt="Physio Therapy" id="img-physiotherapy" class="w-16 h-16 rounded-md object-cover service-image" />
+        <span>Physio Therapy</span>
+      </button>
+      <div id="physiotherapy" class="mt-4 text-gray-700 text-base hidden service-detail">
+        <p><strong>What is it?</strong><br>Uses guided exercises and manual therapy to restore movement and function after injury or illness.</p>
+        <p class="mt-2"><strong>How it helps:</strong></p>
+        <ul class="list-disc pl-5 space-y-1 mt-1">
+          <li>Rehabilitates injuries and improves mobility</li>
+          <li>Relieves chronic pain and corrects posture</li>
+          <li>Supports balance and coordination</li>
+          <li>Helps patients with paralysis and neurological conditions</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript Toggle Function -->
+<script>
+  function toggleService(selectedId) {
+    const allDetails = document.querySelectorAll('.service-detail');
+    const allImages = document.querySelectorAll('.service-image');
+
+    allDetails.forEach(detail => {
+      if (detail.id === selectedId) {
+        detail.classList.toggle('hidden');
+      } else {
+        detail.classList.add('hidden');
+      }
+    });
+
+    allImages.forEach(img => {
+      const parentId = img.id.replace('img-', '');
+      const isActive = !document.getElementById(parentId).classList.contains('hidden');
+
+      if (isActive) {
+        img.classList.add('hidden');
+      } else {
+        img.classList.remove('hidden');
+      }
+    });
+  }
+</script>
+
+  <section class="bg-white py-20 px-6 md:px-16">
+  <div class="text-center mb-12">
+    <!-- <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-4"> -->
+      <!-- <h2 class="relative text-3xl font-bold text-green-800 text-center underline-animate-load mb-6"> -->
+      <!-- <h2 class="text-3xl font-bold text-green-800 text-center underline decoration-green-800 underline-offset-4 mb-6"> -->
+      <h2 class="inline-block relative text-3xl font-bold text-green-800 underline-animate-center">
+      Why Choose Us</h2>
+    <!-- <p class="text-gray-700 max-w-3xl mx-auto"> -->
+    <p class="mt-4 text-gray-700 text-base md:text-lg max-w-7xl mx-auto whitespace-nowrap overflow-hidden text-ellipsis">
+    We provide preventive care and multidimensional treatment for all kinds of physical and psychosomatic problems.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-800">
+    
+    <!-- Column 1 -->
+    <div class="bg-green-50 p-6 rounded-xl shadow-md">
+      <h3 class="font-semibold text-lg mb-2 text-green-800">Orthopedic & Neurological Problems</h3>
+      <ul class="list-disc pl-5 space-y-1 text-sm">
+        <li>Arthritis (Rheumatoid/Osteo)</li>
+        <li>Joint Pain, Slip Disc, Sciatica</li>
+        <li>Back Pain, Muscle Pain</li>
+        <li>Cervical Spondylosis</li>
+        <li>Neck Stiffness, Frozen Shoulder</li>
+      </ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="bg-green-50 p-6 rounded-xl shadow-md">
+      <h3 class="font-semibold text-lg mb-2 text-green-800">Digestive Problems</h3>
+      <ul class="list-disc pl-5 space-y-1 text-sm">
+        <li>Constipation, Gas, Acidity</li>
+        <li>Indigestion, Piles, Ulcers</li>
+        <li>Liver Disorder</li>
+        <li>Obesity, Diabetes</li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="bg-green-50 p-6 rounded-xl shadow-md">
+      <h3 class="font-semibold text-lg mb-2 text-green-800">Mental & Psychosomatic Problems</h3>
+      <ul class="list-disc pl-5 space-y-1 text-sm">
+        <li>Depression, Insomnia, Phobia</li>
+        <li>Stress, Mental Blockage</li>
+        <li>Low Mood, Habit Change</li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="bg-green-50 p-6 rounded-xl shadow-md">
+      <h3 class="font-semibold text-lg mb-2 text-green-800">Cardiac & Respiratory Problems</h3>
+      <ul class="list-disc pl-5 space-y-1 text-sm">
+        <li>High Blood Pressure</li>
+        <li>Varicose Veins, AVN/DVT</li>
+        <li>Asthma, Bronchitis, Allergy</li>
+        <li>Post-COVID Care</li>
+      </ul>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="bg-green-50 p-6 rounded-xl shadow-md">
+      <h3 class="font-semibold text-lg mb-2 text-green-800">Hormonal & Gynecological</h3>
+      <ul class="list-disc pl-5 space-y-1 text-sm">
+        <li>PCOD / PCOS, Thyroid</li>
+        <li>Infertility, Irregular Menses</li>
+        <li>Hormonal Imbalance</li>
+        <li>White Discharge, Anemia</li>
+      </ul>
+    </div>
+
+    <!-- Column 6 -->
+    <div class="bg-green-50 p-6 rounded-xl shadow-md">
+      <h3 class="font-semibold text-lg mb-2 text-green-800">Skin & Beauty Treatments</h3>
+      <ul class="list-disc pl-5 space-y-1 text-sm">
+        <li>Hair Fall, Psoriasis, Eczema</li>
+        <li>Warts/Skin Tags, Acne</li>
+        <li>Skin Tightening, Anti-Aging</li>
+        <li>Body Shaping, Figure Correction</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+   <!-- Quote Ribbon -->
+  <section class="relative quote-bg text-white text-center py-24">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <h2 class="relative text-3xl font-semibold max-w-3xl mx-auto drop-shadow-md px-4 z-10">
+      “True healing begins when the body listens to nature, the mind finds stillness, and the soul feels nurtured.”
+    </h2>
+  </section>
+
+  <!-- Yoga Basic Pose Section -->
+<section class="text-center py-16 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6 text-red-600">LEARN <span class="text-lg tracking-widest">FROM THE BASICS</span></h2>
+    <img src="images/hero_yoga.jpg" alt="Yoga Basic Poses" class="mx-auto max-w-full h-auto mb-6" />
+    <p class="text-base text-gray-700 max-w-3xl mx-auto">
+      Discover the foundation of yoga with basic poses that improve strength, flexibility, and balance. Perfect for beginners, these poses help calm the mind, enhance body awareness, and support overall well-being.
+    </p>
+  </div>
+</section>
+  
+  <!-- Motivational Highlight Section -->
+  <section class="bg-green-50 text-center py-24 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-semibold text-green-800 mb-6">“Let food be thy medicine and medicine be thy food.”</h2>
+      <p class="text-lg">We believe in the power of nature, the wisdom of tradition, and the strength of the inner spirit.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="bg-white text-center text-gray-800 mt-0 pt-0">
+
+  <!-- Logo -->
+  <div class="pt-10">
+    <img src="images/Brandlogo_SSNC.png" alt="Logo" class="h-28 mx-auto">
+  </div>
+
+  <!-- Address & Contact -->
+  <div class="text-base leading-relaxed mt-4">
+    <p>📍 Durg, Chhattisgarh, India</p>
+    <p class="mt-2">
+      <i class="fas fa-envelope mr-1"></i> dr.nirmalagupta9@gmail.com |
+      <i class="fas fa-mobile-alt ml-2 mr-1 text-red-700"></i> +91 78282 99487
+  </p>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div class="flex justify-center gap-6 text-2xl text-gray-800 mt-4">
+    <a href="#" title="Facebook" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" title="Instagram" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <!-- 🌅 Image + Copyright: wrapped in brown background -->
+  <div style="background-color: #3a1e0a; margin-top: 0; padding: 0; border-top: none;">
+    <div style="margin: 0; padding: 0; line-height: 0;">
+      <img src="images/sun_salutation1.png" alt="Sun Salutation Footer" style="display: block; width: 100%; height: auto; margin: 0; padding: 0;">
+    </div>
+
+    <div class="text-sm text-white text-center py-4" style="margin: 0; padding: 0">
+      © 2025 by Shree Sahaj Naturopathy and Yoga Center, All rights reserved.
+    </div>
+    <div style="background-color: #3a1e0a; height: 10px;"></div>
+  </div>
+</footer>
+
+<!-- Font Awesome (add this before </body>) -->
+<!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+
+
+  <!-- Swiper Script -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      effect: 'fade',
+    });
+  </script>
+</body>
+</html>
