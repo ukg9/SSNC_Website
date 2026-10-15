@@ -11,6 +11,7 @@
   <meta property="og:description" content="Explore photos of yoga, naturopathy awareness, health campaigns and community activities in Durg, Chhattisgarh.">
   <meta property="og:url" content="https://shreesahajnaturecurefoundation.netlify.app/gallery.html">
   <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/layout.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     body { font-family: 'Lato', sans-serif; }
@@ -33,26 +34,44 @@ header nav{display:flex;flex-wrap:wrap;gap:.4rem .85rem;align-items:center}heade
 <body class="bg-green-50 text-gray-800">
 
   <!-- Navbar -->
-  <header class="fixed w-full z-50 bg-green-100 shadow-md">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center px-2 py-4 gap-2 md:gap-0">
-      <div class="flex items-center gap-4">
-        <img loading="eager" decoding="async" src="images/optimized/brandlogo-ssnc-fc343c1-480.webp" srcset="images/optimized/brandlogo-ssnc-fc343c1-480.webp 480w, images/optimized/brandlogo-ssnc-fc343c1-1410.webp 1410w" sizes="(max-width: 640px) 100vw, 700px" height="1115" width="1410" alt="SSNC Logo" class="h-16 w-auto rounded-full shadow-md">
-        <div class="flex flex-col leading-tight">
-          <span class="text-xl sm:text-2xl md:text-3xl font-bold text-green-800 tracking-wide font-serif">Shree Sahaj Nature Cure Foundation</span>
-          <span class="text-xs sm:text-sm text-green-700 italic">Formerly Shree Sahaj Naturopathy &amp; Yoga Center</span>
-        </div>
-      </div>
-      <nav class="space-x-4 text-green-800 font-medium text-sm sm:text-base mt-2 md:mt-0">
+  <!-- SSNC-SHARED-HEADER:START -->
+<header class="ssnc-header">
+  <div class="ssnc-header-inner">
+    <a class="ssnc-brand" href="index.html" aria-label="Shree Sahaj Nature Cure Foundation — Home">
+      <img class="ssnc-brand-logo" src="images/optimized/brandlogo-ssnc-fc343c1-480.webp" width="78" height="62" alt="SSNC Foundation logo" decoding="async" fetchpriority="high">
+      <span class="ssnc-brand-copy">
+        <span class="ssnc-brand-name">Shree Sahaj Nature Cure Foundation</span>
+        <span class="ssnc-brand-subtitle">Formerly Shree Sahaj Naturopathy &amp; Yoga Center</span>
+      </span>
+    </a>
+    <nav class="ssnc-desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="legacy.html">Legacy</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="Education.html">Education</a>
+      <a href="Consultation.html">Consultation</a>
+    </nav>
+    <details class="ssnc-mobile-menu">
+      <summary aria-label="Toggle navigation menu">
+        <span>Menu</span>
+        <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </summary>
+      <nav aria-label="Mobile navigation">
         <a href="index.html">Home</a>
-        <a href="about.html" >About</a>
+        <a href="about.html">About</a>
         <a href="legacy.html">Legacy</a>
         <a href="services.html">Services</a>
-        <a href="gallery.html" class="text-green-900 font-semibold">Gallery</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
         <a href="Education.html">Education</a>
         <a href="Consultation.html">Consultation</a>
       </nav>
-    </div>
-  </header>
+    </details>
+  </div>
+</header>
+<!-- SSNC-SHARED-HEADER:END -->
+
 
   <!-- Gallery Content -->
   <main class="max-w-6xl mx-auto px-4 py-16 pt-28">
@@ -163,7 +182,7 @@ header nav{display:flex;flex-wrap:wrap;gap:.4rem .85rem;align-items:center}heade
 
   
   <!-- Motivational Highlight Section -->
-  <section class="bg-green-50 text-center py-24 px-6">
+  <section class="ssnc-motivation bg-green-50 text-center py-24 px-6">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl font-semibold text-green-800 mb-6">“Let food be thy medicine and medicine be thy food.”</h2>
       <p class="text-lg">We believe in the power of nature, the wisdom of tradition, and the strength of the inner spirit.</p>
@@ -171,43 +190,30 @@ header nav{display:flex;flex-wrap:wrap;gap:.4rem .85rem;align-items:center}heade
   </section>
 
 <!-- Footer -->
-<footer class="bg-white text-center text-gray-800 mt-0 pt-0">
-
-  <!-- Logo -->
-  <div class="pt-10">
-    <img loading="lazy" decoding="async" src="images/optimized/brand-logo-06e4413-480.webp" srcset="images/optimized/brand-logo-06e4413-480.webp 480w, images/optimized/brand-logo-06e4413-1254.webp 1254w" sizes="(max-width: 640px) 100vw, 700px" height="1254" width="1254" alt="Logo" class="h-28 mx-auto">
+<!-- SSNC-SHARED-FOOTER:START -->
+<footer class="ssnc-footer">
+  <div class="ssnc-footer-main">
+    <a class="ssnc-footer-logo-link" href="index.html" aria-label="Return to SSNC Foundation homepage">
+      <img class="ssnc-footer-logo" src="images/optimized/brandlogo-ssnc-fc343c1-480.webp" width="145" height="115" loading="lazy" decoding="async" alt="Shree Sahaj Nature Cure Foundation logo">
+    </a>
+    <h2>Shree Sahaj Nature Cure Foundation</h2>
+    <p class="ssnc-cin">CIN: U86900CT2026NPL020841</p>
+    <address class="ssnc-contact">
+      <p>📍 309, Sadar Bazar, Durg – 491001, Chhattisgarh, India</p>
+      <div class="ssnc-contact-links">
+        <a href="mailto:ssncfoun@gmail.com" aria-label="Email SSNC Foundation">✉ ssncfoun@gmail.com</a>
+        <a href="tel:+917587443583" aria-label="Call SSNC Foundation">☎ +91 75874 43583</a>
+      </div>
+    </address>
+    <p class="ssnc-story">A journey rooted since 2010. <a href="legacy.html">Read our full story.</a></p>
   </div>
-
-  <!-- Name, Legal Identity & Contact -->
-  <div class="text-base leading-relaxed mt-4 max-w-2xl mx-auto px-4">
-    <p class="text-lg font-semibold text-green-800">Shree Sahaj Nature Cure Foundation</p>
-    <p class="text-xs sm:text-sm text-gray-600 mt-1">CIN: U86900CT2026NPL020841</p>
-    <p class="mt-3">📍 309, Sadar Bazar, Durg – 491001, Chhattisgarh, India</p>
-    <p class="mt-2">
-      <i class="fas fa-envelope mr-1"></i> ssncfoun@gmail.com |
-      <i class="fas fa-mobile-alt ml-2 mr-1 text-red-700"></i> +91 75874 43583
-    </p>
-    <p class="text-xs text-gray-500 mt-3">A journey rooted since 2010. <a href="legacy.html" class="underline hover:text-green-700">Read our full story</a>.</p>
+  <div class="ssnc-footer-art">
+    <img src="images/optimized/sun-salutation1-16afe06-1600.webp" width="1600" height="186" loading="lazy" decoding="async" alt="Decorative silhouettes illustrating yoga poses">
   </div>
-
-  <!-- Social Media Icons -->
-  <div class="flex justify-center gap-6 text-2xl text-gray-800 mt-4">
-    <a href="#" title="Facebook" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" title="Instagram" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
-  </div>
-
-  <!-- 🌅 Image + Copyright: wrapped in brown background -->
-  <div style="background-color: #3a1e0a; margin-top: 0; padding: 0; border-top: none;">
-    <div style="margin: 0; padding: 0; line-height: 0;">
-      <img loading="lazy" decoding="async" src="images/optimized/sun-salutation1-16afe06-480.webp" srcset="images/optimized/sun-salutation1-16afe06-480.webp 480w, images/optimized/sun-salutation1-16afe06-1600.webp 1600w" sizes="(max-width: 640px) 100vw, 700px" height="202" width="1738" alt="Sun Salutation Footer" style="display: block; width: 100%; height: auto; margin: 0; padding: 0;">
-    </div>
-
-    <div class="text-sm text-white text-center py-4" style="margin: 0; padding: 0">
-      © 2026 Shree Sahaj Nature Cure Foundation. All rights reserved.
-    </div>
-    <div style="background-color: #3a1e0a; height: 10px;"></div>
-  </div>
+  <div class="ssnc-footer-bottom">© 2026 Shree Sahaj Nature Cure Foundation. All rights reserved.</div>
 </footer>
+<!-- SSNC-SHARED-FOOTER:END -->
+
 
 <!-- Font Awesome (add this before </body>) -->
 <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
