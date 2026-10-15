@@ -1,0 +1,137 @@
+/* SSNC mobile layout. Loaded LAST to override older page-level desktop positioning.
+   Desktop (1024px+) remains unchanged. */
+@media (max-width: 1023px) {
+  html { scroll-padding-top: 78px; }
+  body { overflow-x: clip; }
+  main, main section, main .grid { min-width: 0; }
+  main img, main video { max-width: 100%; }
+  main h1, main h2, main h3, main p { overflow-wrap: break-word; }
+  .ssnc-header .ssnc-brand { min-width: 0; }
+  .ssnc-header .ssnc-brand-copy { min-width:0; }
+  .ssnc-header .ssnc-brand-name { overflow-wrap:normal; }
+  .quote-bg { background-attachment:scroll !important; }
+
+  /* Home: Swiper cards become compact photo-first slides, not full-screen desktop slides. */
+  body.ssnc-home .ssnc-home-hero { width:100%; max-width:100%; padding:0 !important; margin:0; overflow:hidden; }
+  body.ssnc-home .ssnc-home-hero .swiper-container,
+  body.ssnc-home .ssnc-home-hero .swiper-wrapper,
+  body.ssnc-home .ssnc-home-hero .swiper-slide { width:100%; height:clamp(360px,62svh,570px) !important; min-height:0 !important; }
+  body.ssnc-home .ssnc-home-hero .swiper-container { overflow:hidden; }
+  body.ssnc-home .ssnc-home-hero .swiper-slide { position:relative !important; overflow:hidden; }
+  body.ssnc-home .ssnc-home-hero .swiper-slide > img {
+    display:block; width:100%; height:100% !important; min-height:0 !important;
+    object-fit:cover; object-position:center; max-width:100%;
+  }
+  body.ssnc-home .ssnc-home-hero .swiper-slide > div.absolute.inset-0 {
+    position:absolute !important; inset:auto 0 0 0 !important; top:auto !important; right:0 !important;
+    width:100%; max-width:100%; height:auto !important; min-height:0 !important;
+    display:flex !important; align-items:flex-end !important; justify-content:flex-start !important;
+    padding:4.5rem clamp(1rem,4vw,1.7rem) 1.25rem !important;
+    background:linear-gradient(to bottom,transparent 0%,rgba(9,25,21,.53) 37%,rgba(6,24,18,.87) 100%);
+    text-align:left !important; box-sizing:border-box;
+  }
+  body.ssnc-home .ssnc-home-hero .swiper-slide .quote-slide,
+  body.ssnc-home .ssnc-home-hero .swiper-slide .quote-left,
+  body.ssnc-home .ssnc-home-hero .swiper-slide .quote-right {
+    position:relative !important; inset:auto !important; top:auto !important; left:auto !important; right:auto !important;
+    display:block; width:100%; max-width:100% !important; min-width:0; margin:0 !important; padding:0 !important;
+    opacity:1 !important; transform:none !important; translate:none !important;
+    text-align:left !important; color:#fff !important;
+    font-family: system-ui,-apple-system,"Segoe UI",sans-serif !important; line-height:1.45 !important;
+  }
+  body.ssnc-home .ssnc-home-hero .swiper-slide h2 {
+    font-size:clamp(1.06rem,2.8vw,1.65rem) !important;
+    line-height:1.38 !important; letter-spacing:0; color:#fff !important;
+    font-weight:600 !important; text-shadow:0 1px 4px rgba(0,0,0,.7);
+    max-width:100%; text-align:left !important; overflow-wrap:break-word;
+  }
+  body.ssnc-home .ssnc-home-hero .swiper-slide p {
+    font-size:.84rem !important; text-align:left !important; color:#f2f7ee !important;
+    margin-top:.65rem !important; overflow-wrap:break-word;
+  }
+  /* Slides with TWO quotes use independent top/bottom contrast panels. */
+  body.ssnc-home .ssnc-home-hero .swiper-slide.ssnc-dual-quote > div.absolute.inset-0:first-of-type {
+    top:0 !important; bottom:auto !important; padding:1.25rem clamp(1rem,4vw,1.7rem) 3.3rem !important;
+    align-items:flex-start !important;
+    background:linear-gradient(to bottom,rgba(8,25,19,.78),rgba(8,25,19,0)) !important;
+  }
+  body.ssnc-home .ssnc-home-hero .swiper-slide.ssnc-dual-quote > div.absolute.inset-0:last-of-type {
+    top:auto !important; bottom:0 !important; padding:3.3rem clamp(1rem,4vw,1.7rem) 1.2rem !important;
+    align-items:flex-end !important;
+    background:linear-gradient(to bottom,transparent,rgba(8,25,19,.83)) !important;
+  }
+
+  /* Home founder portrait and copy: avoid large blank bands on a narrow display. */
+  body.ssnc-home .ssnc-founder { padding:clamp(1.5rem,4vw,2.7rem) 1rem !important; }
+  body.ssnc-home .ssnc-founder > .grid { gap:1.35rem !important; }
+  body.ssnc-home .ssnc-founder img[alt="Dr. Nirmala Gupta"] {
+    display:block; width:100%; height:auto; max-height:500px; object-fit:contain; object-position:center;
+    margin:0 auto; border-radius:14px;
+  }
+  body.ssnc-home .ssnc-founder h2 { font-size:clamp(1.65rem,4vw,2.25rem) !important; line-height:1.25; margin-bottom:.6rem !important; }
+  body.ssnc-home .ssnc-founder p { line-height:1.7; }
+  body.ssnc-home .quote-bg { padding-block:clamp(2.5rem,5vw,4rem) !important; }
+  body.ssnc-home .quote-bg h2 { font-size:clamp(1.4rem,3.3vw,2rem) !important; line-height:1.35; }
+
+  /* Education hero shows the complete principle panels without stretching. */
+  body.ssnc-education .principles-swiper { width:100%; max-width:100%; overflow:hidden; }
+  body.ssnc-education .principles-swiper .swiper-slide { min-width:0; }
+  body.ssnc-education .principles-swiper img {
+    display:block; width:100% !important; height:auto !important; max-height:55svh !important;
+    object-fit:contain !important; margin:0 auto;
+  }
+
+  /* Common content rhythm and controls on tablet/phone. */
+  body.ssnc-consultation main { padding-top:2.2rem !important; padding-bottom:2.5rem !important; }
+  body.ssnc-services main > section:first-child { padding-top:2.2rem !important; padding-bottom:2.5rem !important; }
+  body.ssnc-about main > section:first-child { padding-top:2.2rem !important; padding-bottom:2.5rem !important; }
+  main .ssnc-motivation { padding:2.3rem 1rem !important; }
+  main form, main input, main select, main textarea { max-width:100%; }
+  main input, main select, main textarea { font-size:16px; }
+}
+
+@media (max-width: 767px) {
+  /* All content must reflow within the viewport, not scale the entire desktop page. */
+  html { scroll-padding-top:75px !important; }
+  main { max-width:100%; }
+  main .max-w-7xl,main .max-w-6xl,main .max-w-4xl,main .max-w-3xl { max-width:100%; min-width:0; }
+  main .grid { grid-template-columns:minmax(0,1fr); }
+  main section.py-32,main section.py-24 { padding-top:2.75rem !important; padding-bottom:2.75rem !important; }
+  main section.py-20 { padding-top:2rem !important; padding-bottom:2rem !important; }
+  main section.py-16 { padding-top:2rem !important; padding-bottom:2rem !important; }
+  main section.pt-32 { padding-top:2rem !important; }
+  main .text-4xl { font-size:clamp(1.65rem,7vw,2.1rem) !important; line-height:1.2; }
+  main .text-3xl { font-size:clamp(1.35rem,6vw,1.75rem) !important; line-height:1.3; }
+  main .text-2xl { font-size:clamp(1.2rem,5.4vw,1.5rem) !important; line-height:1.35; }
+  main .text-justify { text-align:left !important; }
+  main .gap-10 { gap:1.5rem; }
+  main .gap-8 { gap:1.25rem; }
+  body.ssnc-home .ssnc-home-hero .swiper-container,
+  body.ssnc-home .ssnc-home-hero .swiper-wrapper,
+  body.ssnc-home .ssnc-home-hero .swiper-slide { height:clamp(360px,60svh,510px) !important; }
+  body.ssnc-home .ssnc-home-hero .swiper-slide h2 { font-size:clamp(1.06rem,4.15vw,1.4rem) !important; }
+  body.ssnc-home .ssnc-founder { padding:1.6rem .9rem !important; }
+  body.ssnc-home .ssnc-founder img[alt="Dr. Nirmala Gupta"] { max-height:430px; }
+  body.ssnc-home .quote-bg { padding-block:2.6rem !important; }
+  body.ssnc-about main > section:first-child { padding-inline:1rem !important; }
+  body.ssnc-about main > section:first-child img { width:100%; height:auto; }
+  body.ssnc-services main > section:first-child { padding-inline:1rem !important; }
+  body.ssnc-services .service-detail { overflow-wrap:break-word; }
+  body.ssnc-services button .service-image { flex:0 0 4rem; }
+  body.ssnc-education main > section:first-child > div.max-w-6xl { padding:2rem 1rem !important; }
+  body.ssnc-consultation main { padding:2rem .9rem 2.5rem !important; }
+  body.ssnc-consultation form { padding:1.15rem !important; }
+  body.ssnc-legacy .story-page { max-width:100%; overflow-x:clip; }
+  body.ssnc-legacy .story-page img { max-width:100%; }
+}
+@media (max-width: 380px) {
+  body.ssnc-home .ssnc-home-hero .swiper-slide h2 { font-size:1.05rem !important; }
+  body.ssnc-home .ssnc-home-hero .swiper-slide > div.absolute.inset-0 { padding-inline:.85rem !important; }
+  .ssnc-header .ssnc-brand-logo { width:43px !important; }
+  .ssnc-header .ssnc-brand-name { font-size:.94rem; }
+}
+@media (prefers-reduced-motion:reduce) {
+  body.ssnc-home .ssnc-home-hero .quote-slide,
+  body.ssnc-home .ssnc-home-hero .quote-left,
+  body.ssnc-home .ssnc-home-hero .quote-right { transition:none !important; animation:none !important; }
+}
