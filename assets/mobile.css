@@ -110,8 +110,30 @@
   body.ssnc-home .ssnc-home-hero .swiper-wrapper,
   body.ssnc-home .ssnc-home-hero .swiper-slide { height:clamp(360px,60svh,510px) !important; }
   body.ssnc-home .ssnc-home-hero .swiper-slide h2 { font-size:clamp(1.06rem,4.15vw,1.4rem) !important; }
-  body.ssnc-home .ssnc-founder { padding:1.6rem .9rem !important; }
-  body.ssnc-home .ssnc-founder img[alt="Dr. Nirmala Gupta"] { max-height:430px; }
+  /* Founder introduction: mobile-only portrait crop, compact heading and reduced spacing.
+     This block is inside max-width:767px; desktop rules remain unchanged. */
+  body.ssnc-home .ssnc-founder { padding:1.1rem .95rem 1.7rem !important; }
+  body.ssnc-home .ssnc-founder > .grid { gap:.85rem !important; }
+  body.ssnc-home .ssnc-founder img[alt="Dr. Nirmala Gupta"] {
+    width:100% !important;
+    height:clamp(285px,84vw,335px) !important;
+    max-height:335px !important;
+    object-fit:cover !important;
+    object-position:center 37% !important;
+    border-radius:14px;
+  }
+  body.ssnc-home .ssnc-founder .relative.z-10 { margin-top:0 !important; }
+  body.ssnc-home .ssnc-founder h2 {
+    font-size:clamp(1.4rem,6vw,1.75rem) !important;
+    line-height:1.2 !important;
+    margin:0 0 .18rem !important;
+  }
+  body.ssnc-home .ssnc-founder .relative.z-10 > p:first-of-type {
+    font-size:clamp(.94rem,3.8vw,1.08rem) !important;
+    line-height:1.4 !important;
+    margin-top:0 !important;
+    margin-bottom:.85rem !important;
+  }
   body.ssnc-home .quote-bg { padding-block:2.6rem !important; }
   body.ssnc-about main > section:first-child { padding-inline:1rem !important; }
   body.ssnc-about main > section:first-child img { width:100%; height:auto; }
