@@ -114,6 +114,22 @@
      This block is inside max-width:767px; desktop rules remain unchanged. */
   body.ssnc-home .ssnc-founder { padding:1.1rem .95rem 1.7rem !important; }
   body.ssnc-home .ssnc-founder > .grid { gap:.85rem !important; }
+  /* Mandala: small, faint side ornament beside the lower biography on mobile.
+     Override the original wide, top-third absolute position so it never covers the portrait. */
+  body.ssnc-home .ssnc-founder > img[alt="Background"] {
+    width:clamp(78px,23vw,104px) !important;
+    height:auto !important;
+    max-width:none !important;
+    max-height:none !important;
+    top:auto !important;
+    left:auto !important;
+    right:-38px !important;
+    bottom:clamp(14px,5vw,34px) !important;
+    transform:none !important;
+    opacity:.12 !important;
+    object-fit:contain !important;
+    z-index:0 !important;
+  }
   body.ssnc-home .ssnc-founder img[alt="Dr. Nirmala Gupta"] {
     width:100% !important;
     height:clamp(285px,84vw,335px) !important;
