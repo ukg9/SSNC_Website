@@ -1,0 +1,64 @@
+/* SSNC shared navigation and footer — single source for all seven pages. */
+:root { --ssnc-green: #165c37; --ssnc-header: #dcfce7; --ssnc-ink: #193e29; }
+html { scroll-padding-top: 90px; }
+body { min-width: 0; overflow-x: clip; }
+#main-content, main { min-width: 0; }
+:where(main h1, main h2, main h3, main section[id]) { scroll-margin-top: 90px; }
+.ssnc-header { position: sticky !important; top: 0; left: auto; right: auto; z-index: 100; width: 100%; background: var(--ssnc-header); box-shadow: 0 2px 7px rgba(24,65,35,.13); }
+.ssnc-header-inner { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-between; gap: clamp(.8rem,2vw,1.8rem); max-width: 1440px; margin: 0 auto; padding: .7rem clamp(.75rem,2.1vw,1.7rem) !important; }
+.ssnc-brand { display:flex; align-items:center; gap: .8rem; color: var(--ssnc-green); text-decoration:none; min-width: 0; max-width: 510px; flex: 0 1 510px; }
+.ssnc-brand-logo { display:block; width: 66px !important; height: auto !important; max-height: 64px; flex: 0 0 auto; object-fit:contain; background:#fff; border-radius: 50%; padding:.15rem; box-shadow: 0 2px 6px #1e512332; }
+.ssnc-brand-copy { display:flex; flex-direction:column; min-width:0; gap: .16rem; }
+.ssnc-brand-name { font: bold clamp(1.16rem,1.8vw,1.75rem)/1.18 Georgia, 'Times New Roman', serif; color:var(--ssnc-green); letter-spacing: .01em; }
+.ssnc-brand-subtitle { font-size: clamp(.68rem,.92vw,.8rem); font-style:italic; line-height:1.25; color:#276c43; }
+.ssnc-header .ssnc-desktop-nav { display:flex !important; flex-direction:row !important; flex-wrap:nowrap !important; align-items:center; justify-content:flex-end; gap: clamp(.45rem,1vw,1rem); margin:0; padding:0; flex: 1 0 auto; white-space:nowrap; overflow:visible; width:auto; font-size:.93rem; }
+.ssnc-header .ssnc-desktop-nav a, .ssnc-mobile-menu nav a { color:#1d663e; text-decoration:none; font-weight:500; padding:.4rem .14rem; min-height:42px; display:inline-flex; align-items:center; border-radius:5px; }
+.ssnc-header nav a[aria-current="page"] { color:#14532d; font-weight:800; }
+.ssnc-header nav a:hover, .ssnc-header nav a:focus-visible { color:#0e4426; text-decoration:underline; text-underline-offset:4px; }
+.ssnc-mobile-menu { display:none; }
+.ssnc-header :focus-visible, .ssnc-footer :focus-visible { outline:3px solid #247948; outline-offset:3px; }
+.ssnc-header + main > section:first-child.pt-32, .ssnc-header + main > section:first-child.pt-28 { padding-top: clamp(2rem,3.4vw,3.1rem) !important; }
+.ssnc-header + main.pt-32, .ssnc-header + main.pt-28 { padding-top: clamp(2rem,3.4vw,3.1rem) !important; }
+.ssnc-motivation { padding: clamp(2.8rem,4.3vw,4.5rem) 1.25rem !important; }
+.ssnc-motivation h2 { line-height:1.3; margin-bottom:1rem; }
+.ssnc-footer { background:#fff; color:#1f2937; text-align:center; margin:0; padding:0; }
+.ssnc-footer-main { max-width: 860px; padding: 2.1rem 1rem 1.7rem; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:.55rem; }
+.ssnc-footer-logo-link { display:block; width: min(135px,35vw); line-height:0; }
+.ssnc-footer .ssnc-footer-logo { display:block !important; width:100% !important; height:auto !important; max-height: 115px; aspect-ratio: 145/115; object-fit:contain !important; margin:auto !important; }
+.ssnc-footer h2 { font-size:clamp(1.1rem,2vw,1.45rem); font-weight:700; color:var(--ssnc-green); line-height:1.35; }
+.ssnc-cin { color:#526074; font-size:.86rem; }
+.ssnc-contact { font-style:normal; line-height:1.6; display:flex; flex-direction:column; gap:.55rem; }
+.ssnc-contact-links { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:.35rem 1.25rem; }
+.ssnc-footer a { color:#205e3d; }
+.ssnc-contact-links a { display:inline-block; font-weight:500; text-underline-offset:3px; }
+.ssnc-story { color:#64748b; font-size:.86rem; margin-top:.35rem; }
+.ssnc-story a { text-decoration:underline; }
+.ssnc-footer-art { width:100%; background:#fff; line-height:0; overflow:hidden; }
+.ssnc-footer-art img { display:block; width:100%; height:auto; max-height:220px; object-fit:contain; object-position:center bottom; margin:0 auto; }
+.ssnc-footer-bottom { background:#3a1e0a; color:#fff; padding:.9rem .75rem; font-size:.82rem; }
+@media(max-width:1199px) {
+  .ssnc-header-inner { padding:.65rem 1rem !important; }
+  .ssnc-brand { flex:1 1 auto; }
+  .ssnc-brand-name { font-size:clamp(1rem,2.8vw,1.5rem); }
+  .ssnc-header .ssnc-desktop-nav { display:none !important; }
+  .ssnc-mobile-menu { display:block; flex:0 0 auto; position:relative; }
+  .ssnc-mobile-menu summary { cursor:pointer; list-style:none; display:flex; gap:.55rem; align-items:center; justify-content:center; border:1px solid #aacdb5; border-radius:9px; padding:.65rem .8rem; color:#164d30; background:#f0fff3; font-weight:700; min-height:44px; }
+  .ssnc-mobile-menu summary::-webkit-details-marker { display:none; }
+  .ssnc-mobile-menu[open] summary { background:#d7f3df; }
+  .ssnc-mobile-menu nav { position:absolute; top:calc(100% + .4rem); right:0; display:flex; flex-direction:column; gap:0; width:min(270px,calc(100vw - 1.5rem)); padding:.5rem; background:#f5fff5; border:1px solid #a8caaa; border-radius:12px; box-shadow: 0 16px 26px #123d2338; white-space:normal; }
+  .ssnc-mobile-menu nav a { width:100%; min-height:43px; padding:.55rem .8rem; }
+  .ssnc-mobile-menu nav a + a { border-top:1px solid #e2efdf; }
+}
+@media(max-width:600px) {
+  .ssnc-header-inner { gap:.45rem; padding:.55rem .65rem !important; }
+  .ssnc-brand { gap:.5rem; }
+  .ssnc-brand-logo { width:47px !important; max-height:49px; }
+  .ssnc-brand-name { font-size:clamp(.92rem,3.8vw,1.18rem); line-height:1.16; }
+  .ssnc-brand-subtitle { font-size:clamp(.57rem,2.3vw,.69rem); }
+  .ssnc-mobile-menu summary { padding:.58rem .58rem; font-size:.78rem; }
+  .ssnc-mobile-menu summary svg { width:18px; height:18px; }
+  .ssnc-footer-main { padding:1.7rem .85rem 1.3rem; }
+  .ssnc-footer .ssnc-footer-logo { max-height:100px; }
+  .ssnc-contact-links { flex-direction:column; gap:.3rem; }
+  .ssnc-footer-art img { max-height:none; }
+}
