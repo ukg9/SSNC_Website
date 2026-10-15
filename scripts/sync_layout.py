@@ -3,7 +3,7 @@
 from pathlib import Path
 import re
 root=Path(__file__).resolve().parents[1]
-pages=["index.html","about.html","services.html","gallery.html","legacy.html","Consultation.html","Education.html"]
+pages=["index.html","about.html","services.html","legacy.html","Consultation.html","Education.html"]
 header=(root/"partials/header.html").read_text(encoding="utf-8").strip()
 footer=(root/"partials/footer.html").read_text(encoding="utf-8").strip()
 for name in pages:
