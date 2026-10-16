@@ -1,267 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Legacy – Shree Sahaj Nature Cure Foundation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Legacy &amp; Community Work | Shree Sahaj Nature Cure Foundation</title>
+  <meta name="description" content="Explore the 2026 recent welfare activities and a photographic journey of naturopathy, yoga, community campaigns and social service in Durg since 2010.">
+  <link rel="canonical" href="https://shreesahajnaturecurefoundation.netlify.app/legacy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Legacy — From Roots to Branches of Hope">
+  <meta property="og:description" content="Recent community welfare highlights and the photographic history of Shree Sahaj Naturopathy &amp; Yoga Center and SSNC Foundation.">
+  <meta property="og:url" content="https://shreesahajnaturecurefoundation.netlify.app/legacy.html">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/layout.css">
   <style>
-    body { font-family: 'Lato', sans-serif; }
-    html { scroll-behavior: smooth; }
-    .quote-bg {
-      background-image: url('images/buddha_background3.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-    .timeline-line {
-      position: absolute;
-      left: 15px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background-color: #15803d;
-    }
-    @media (min-width: 768px) {
-      .timeline-line { left: 50%; transform: translateX(-1px); }
-    }
-    .timeline-dot {
-      position: absolute;
-      left: 8px;
-      width: 16px;
-      height: 16px;
-      border-radius: 9999px;
-      background-color: #15803d;
-      border: 3px solid #f0fdf4;
-    }
-    @media (min-width: 768px) {
-      .timeline-dot { left: calc(50% - 8px); }
-    }
-  </style>
-</head>
-<body class="bg-green-50 text-gray-800">
+/* Legacy story: purpose-built typography and photographic branching. */
+:root { --forest:#185b38; --earth:#70533a; --sage:#71966a; --ivory:#fffdf6; }
+html { scroll-behavior:smooth; }
+body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8fbf4; color:#314a3c; }
+.story-page { overflow:hidden; }
+.story-page h1,.story-page h2,.story-page h3 { font-family: Georgia, "Times New Roman",serif; letter-spacing:-.025em; }
+.story-page a:focus-visible,.story-page button:focus-visible,.story-page summary:focus-visible { outline:3px solid #c68d30; outline-offset:4px; }
+.story-eyebrow { display:inline-block; font-size:.72rem; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:#637d4a; }
+/* Hero: soft photographic multiple exposures in side spaces (no images reused elsewhere). */
+.story-hero { position:relative; isolation:isolate; padding: clamp(4rem,7vw,7rem) 1rem clamp(3.3rem,5vw,5rem); overflow:hidden; background:radial-gradient(circle at 9% 30%,#d5e8d3,transparent 46%),radial-gradient(circle at 86% 70%,#f2eacb,transparent 42%),linear-gradient(115deg,#f6fbf1,#fffdf3); }
+.story-hero-inner { position:relative; z-index:2; max-width:770px; margin:auto; text-align:center; }
+.story-hero h1 { font-size:clamp(2.65rem,5.6vw,5rem); line-height:1.1; color:#145b37; margin:1rem auto 1.25rem; font-weight:700; }
+.story-hero p { font-size:clamp(1rem,1.4vw,1.13rem); line-height:1.8; max-width:665px; margin:auto; color:#3e6d51; }
+.story-hero .story-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem; margin-top:1.55rem; }
+.story-tags span { border:1px solid #cbdcbe; border-radius:999px; background:#ffffffc9; padding:.5rem .85rem; font-size:.81rem; color:#2e5a35; }
+.hero-exposure { position:absolute; width:clamp(175px,27vw,410px); height:clamp(260px,40vw,540px); inset-block-start:5%; opacity:.48; filter:saturate(.72); pointer-events:none; z-index:0; }
+.hero-exposure--left { left:-7%; transform:rotate(-9deg); }
+.hero-exposure--right { right:-7%; transform:rotate(8deg); }
+.hero-exposure img { position:absolute; width:78%; height:66%; object-fit:cover; border-radius:56% 44% 49% 51% / 33% 62% 38% 67%; box-shadow:0 10px 35px #42633717; -webkit-mask-image:radial-gradient(ellipse,#000 43%,transparent 76%); mask-image:radial-gradient(ellipse,#000 43%,transparent 76%); }
+.hero-exposure img:nth-child(1) { top:0; left:0; }
+.hero-exposure img:nth-child(2) { right:-7%; bottom:-7%; mix-blend-mode:multiply; opacity:.75; transform:rotate(14deg); }
+.hero-exposure--right img:first-child { top:15%; right:-5%; left:auto; }
+.hero-exposure--right img:last-child { right:20%; bottom:-10%; }
+.story-hero::after { content:""; position:absolute; width:400px; height:400px; border:2px solid #a9c99a61; border-radius:53% 47% 51% 49%; transform:rotate(35deg); top:-260px; left:calc(50% - 200px); }
+/* Shared section headings */
+.story-section { padding:clamp(3.2rem,6vw,5.7rem) clamp(.9rem,2vw,1.5rem); }
+.section-heading { text-align:center; max-width:740px; margin:0 auto 2.4rem; }
+.section-heading h2 { font-size:clamp(2rem,4.3vw,3.15rem); color:var(--forest); margin:.55rem 0; line-height:1.18; }
+.section-heading p { max-width:660px; margin:.55rem auto 0; line-height:1.7; color:#58725c; }
+/* Recent activities: replace only the four cards below when new events arrive. */
+.recent-highlights { background:linear-gradient(180deg,#fffdf6,#eef7e9); }
+.recent-grid { max-width:1210px; margin:auto; display:grid; grid-template-columns:1.25fr .85fr .85fr; grid-template-rows:repeat(2,minmax(190px,255px)); gap:12px; }
+.recent-card { position:relative; overflow:hidden; border-radius:21px; background:#d4e5d0; box-shadow:0 12px 26px #193e2822; display:block; }
+.recent-card:first-child { grid-row:span 2; }
+.recent-card:nth-child(4) { grid-column:span 2; }
+.recent-card img { width:100%; height:100%; display:block; object-fit:cover; transition:transform .4s; }
+.recent-card:hover img { transform:scale(1.035); }
+.recent-card::after { content:""; position:absolute; inset:50% 0 0; background:linear-gradient(transparent,#061a0a9c); pointer-events:none; }
+.recent-card .recent-caption { position:absolute; left:0; right:0; bottom:0; z-index:2; color:#fff; padding:1.3rem 1.1rem .95rem; font-weight:600; font-size:.95rem; line-height:1.35; }
+.recent-label { display:block; font-size:.68rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; margin-bottom:.25rem; color:#e7f4d7; }
+.recent-note { max-width:1210px; margin:1.3rem auto 0; font-size:.8rem; color:#627461; text-align:right; }
+/* Archive images absorbed from the old Gallery page; no date implied. */
+.archive-story { background:#eff6e9; border-block:1px solid #dcebd2; }
+.archive-intro { max-width:1080px; margin:auto auto 1.1rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1.2rem; }
+.archive-intro p { max-width:640px; color:#607461; }
+.archive-stack { max-width:1080px; margin:auto; display:grid; gap:.75rem; }
+.archive-group { border:1px solid #d7e5ce; background:#fffdf9; border-radius:14px; overflow:hidden; }
+.archive-group summary { cursor:pointer; padding:1rem 1.1rem; color:var(--forest); font-weight:700; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.archive-group summary span { font-size:.8rem; color:#59755b; font-weight:500; }
+.archive-group summary:hover { background:#f6fbf3; }
+.archive-photos { padding:.3rem .85rem 1rem; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.55rem; }
+.archive-photo { border-radius:11px; overflow:hidden; background:#dfead7; display:block; aspect-ratio:1.2; }
+.archive-photo img { width:100%; height:100%; display:block; object-fit:cover; transition:transform .3s; }
+.archive-photo:hover img { transform:scale(1.06); }
+/* Tree: each stage has content on one side and a blended photographic canopy on the other. */
+.tree-story { background:linear-gradient(90deg,#f8faf2 0,#eff7e8 47%,#f9faf1 100%); position:relative; }
+.tree-story .section-heading { margin-bottom:3.5rem; }
+.tree-guide { color:#6a7f62; font-size:.87rem; text-align:center; margin-top:-1.3rem; margin-bottom:2rem; }
+.story-trunk { max-width:1160px; margin:auto; position:relative; }
+.story-trunk::before { content:""; position:absolute; top:0; bottom:0; left:50%; transform:translateX(-50%); width:12px; background:linear-gradient(#81a96e,#5e7b4c 40%,#755238 88%,#6e4c32); border-radius:15px; box-shadow:0 0 0 6px #dcead3; }
+.chapter { position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(3.6rem,7vw,7rem); align-items:center; padding:1.05rem 0; min-height:325px; }
+.chapter:nth-child(even) .chapter-copy { grid-column:2; grid-row:1; }
+.chapter:nth-child(even) .chapter-montage { grid-column:1; grid-row:1; }
+.chapter-copy { position:relative; padding:clamp(1.2rem,2.5vw,2rem); background:#fffcf4; border:1px solid #dbe7ce; border-radius:21px; box-shadow:0 12px 30px #35502b13; min-width:0; }
+.chapter-copy h3 { font-size:clamp(1.4rem,2.7vw,2.1rem); color:#185a38; line-height:1.22; margin:.7rem 0; }
+.chapter-copy p { line-height:1.7; font-size:.94rem; color:#51665a; }
+.chapter-year { font:bold .94rem/1 system-ui,sans-serif; padding:.52rem .85rem; border-radius:90px; display:inline-block; color:#fff; background:#377b4d; }
+.chapter-node { position:absolute; z-index:4; top:calc(50% - 18px); left:calc(50% - 18px); width:36px; height:36px; border-radius:50%; border:4px solid #528959; display:grid; place-items:center; background:#eaf5db; color:#27693e; box-shadow:0 0 0 5px #e2efdb; }
+.chapter-montage { position:relative; min-height:270px; height:clamp(280px,28vw,365px); isolation:isolate; overflow:hidden; border-radius:23px; background:linear-gradient(135deg,#c5dfbd,#f4e8d0); box-shadow:0 15px 32px #2e54232a; }
+.chapter-montage::after { content:""; position:absolute; z-index:3; inset:0; pointer-events:none; border:10px solid #ffffff49; border-radius:inherit; }
+.chapter-montage::before { content:""; position:absolute; inset:0; z-index:2; pointer-events:none; background:radial-gradient(ellipse at 44% 58%,transparent 37%,#edf6dc20 65%,#ebf2d45f 100%); }
+.photo-slice { display:block; position:absolute; overflow:hidden; background:#cbe1c3; border:4px solid #ffffffa0; box-shadow:0 8px 28px #1739224a; }
+.photo-slice img { width:100%; height:100%; display:block; object-fit:cover; transition:transform .42s; }
+.photo-slice:hover img { transform:scale(1.055); }
+.photo-slice-1 { width:72%; height:95%; left:-3%; top:2%; border-radius:43% 13% 19% 10% / 20% 12% 18% 25%; }
+.photo-slice-2 { width:48%; height:63%; right:-3%; top:0; border-radius:28% 10% 10% 35%; opacity:.93; transform:rotate(6deg); }
+.photo-slice-3 { width:48%; height:53%; right:2%; bottom:-8%; border-radius:10% 33% 24% 9%; opacity:.92; transform:rotate(-6deg); }
+.chapter-photo-sheen { position:absolute; inset:0; pointer-events:none; z-index:2; background:linear-gradient(130deg,transparent 45%,#d6efcf14 56%,#fff8d825 85%); mix-blend-mode:screen; }
+.chapter-single .photo-slice-1 { width:100%; height:100%; inset:0; border-radius:20px; transform:none; }
+.chapter-duo .photo-slice-1 { width:75%; height:92%; }
+.chapter-duo .photo-slice-2 { width:57%; height:72%; top:15%; }
+.chapter-roots { margin-top:2rem; padding-block:2rem; }
+.chapter-roots .chapter-copy { border-color:#d9c9a7; background:#f9f4e8; }
+.chapter-roots .chapter-year { background:#79593c; }
+.chapter-roots .chapter-montage { box-shadow:0 12px 35px #5d46283b; }
+.root-note { max-width:820px; margin:2.3rem auto 0; background:#e6eddc; border:1px solid #cbdec5; padding:1.25rem 1.5rem; border-radius:18px; color:#516b4f; text-align:center; line-height:1.75; }
+.root-note strong { color:#31593b; }
+/* Accessible lightbox: displayed names only as user-friendly descriptions on request */
+.photo-lightbox { position:fixed; inset:0; z-index:500; display:none; place-items:center; background:#05160de9; padding:1rem; }
+.photo-lightbox[aria-hidden="false"] { display:grid; }
+.photo-lightbox figure { max-width:min(100%,1100px); margin:auto; display:flex; flex-direction:column; align-items:center; gap:.75rem; }
+.photo-lightbox img { max-width:100%; max-height:82vh; object-fit:contain; border-radius:5px; }
+.photo-lightbox figcaption { color:#ebf5eb; font-size:.9rem; text-align:center; }
+.photo-lightbox button { position:absolute; right:1rem; top:1rem; min-width:44px; min-height:44px; border:1px solid #dfeadd7d; border-radius:99px; background:#13361e; color:#fff; font-size:1.7rem; cursor:pointer; }
+/* Explicit breakpoints for narrow screens and tablet */
+@media(max-width:1080px){ .hero-exposure { opacity:.26; } .hero-exposure--left { left:-14%; } .hero-exposure--right { right:-14%; } }
+@media(max-width:760px){
+  .story-hero { padding:3.2rem 1.1rem 3.7rem; }
+  .story-hero-inner { max-width:96%; }
+  .story-hero h1 { font-size:clamp(2.35rem,9vw,3.4rem); }
+  .hero-exposure { opacity:.15; width:180px; height:310px; }
+  .hero-exposure--left { left:-120px; } .hero-exposure--right { right:-120px; }
+  .recent-grid { grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(3,minmax(190px,220px)); gap:.6rem; }
+  .recent-card:first-child { grid-column:span 2; grid-row:span 1; }
+  .recent-card:nth-child(4) { grid-column:auto; }
+  .recent-note { text-align:left; }
+  .archive-photos { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .story-trunk::before { left:13px; transform:none; width:8px; box-shadow:0 0 0 4px #e0ebd6; }
+  .chapter { display:flex; flex-direction:column; align-items:stretch; min-height:0; gap:.75rem; padding:0 0 2.1rem 2.7rem; }
+  .chapter:nth-child(even) .chapter-copy, .chapter:nth-child(even) .chapter-montage { grid-column:auto; grid-row:auto; }
+  .chapter-node { top:18px; left:-1px; width:28px; height:28px; font-size:.8rem; }
+  .chapter-montage { height:clamp(225px,62vw,355px); min-height:0; }
+  .chapter-copy { padding:1.15rem; }
+  .chapter-roots { margin-top:.3rem; }
+}
+@media(max-width:480px){
+  .story-section { padding:2.7rem .85rem; }
+  .recent-grid { grid-template-rows:repeat(3,170px); }
+  .recent-card .recent-caption { font-size:.81rem; padding:.8rem .75rem; }
+  .archive-photos { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .chapter { padding-left:2rem; } .chapter-montage { height:215px; }
+  .chapter-copy h3 { font-size:1.45rem; }
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after { transition-duration:.01ms!important; scroll-behavior:auto!important; }}
 
-  <!-- Navbar -->
-  <header class="fixed w-full z-50 bg-green-100 shadow-md">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center px-2 py-4 gap-2 md:gap-0">
-      <div class="flex items-center gap-4">
-        <img src="images/Brandlogo_SSNC.jpg" alt="SSNC Logo" class="h-16 w-auto rounded-full shadow-md">
-        <div class="flex flex-col leading-tight">
-          <span class="text-xl sm:text-2xl md:text-3xl font-bold text-green-800 tracking-wide font-serif">Shree Sahaj Nature Cure Foundation</span>
-          <span class="text-xs sm:text-sm text-green-700 italic">Formerly Shree Sahaj Naturopathy &amp; Yoga Center</span>
-        </div>
-      </div>
-      <nav class="space-x-4 text-green-800 font-medium text-sm sm:text-base mt-2 md:mt-0">
+  </style>
+  <link rel="stylesheet" href="assets/mobile.css">
+</head>
+<body class="ssnc-legacy">
+<!-- SSNC-SHARED-HEADER:START -->
+<header class="ssnc-header">
+  <div class="ssnc-header-inner">
+    <a class="ssnc-brand" href="index.html" aria-label="Shree Sahaj Nature Cure Foundation — Home">
+      <img class="ssnc-brand-logo" src="images/optimized/ComLogo.webp" width="78" height="62" alt="SSNC Foundation logo" decoding="async" fetchpriority="high">
+      <span class="ssnc-brand-copy">
+        <span class="ssnc-brand-name">Shree Sahaj Nature Cure Foundation</span>
+      </span>
+    </a>
+    <nav class="ssnc-desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="legacy.html" aria-current="page">Legacy</a>
+      <a href="services.html">Services</a>
+      <a href="Education.html">Education</a>
+      <a href="Consultation.html">Consultation</a>
+    </nav>
+    <details class="ssnc-mobile-menu">
+      <summary aria-label="Toggle navigation menu">
+        <span>Menu</span>
+        <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </summary>
+      <nav aria-label="Mobile navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="legacy.html" class="text-green-900 font-semibold">Legacy</a>
+        <a href="legacy.html" aria-current="page">Legacy</a>
         <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
         <a href="Education.html">Education</a>
         <a href="Consultation.html">Consultation</a>
       </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="pt-32 pb-12 px-6 bg-white text-center">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl font-bold text-green-800 mb-4">Our Legacy</h1>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        From a single naturopathy center in Durg to a foundation carrying that work into the wider community — this is the story of Shree Sahaj Nature Cure Foundation, sixteen years in the making.
-      </p>
+    </details>
+  </div>
+</header>
+<!-- SSNC-SHARED-HEADER:END -->
+<main class="story-page" id="main-content">
+  <section class="story-hero" aria-labelledby="hero-title">
+    <div class="hero-exposure hero-exposure--left" aria-hidden="true"><img src="images/optimized/naturopathyday6-cfe8ffa-480.webp" alt="Naturopathy and community awareness activity" loading="lazy" decoding="async" class="" width="800" height="600"><img src="images/optimized/bcampaigns4-40dbba1-480.webp" alt="Blood donation and social welfare initiative" loading="lazy" decoding="async" class="" width="800" height="600"></div>
+    <div class="hero-exposure hero-exposure--right" aria-hidden="true"><img src="images/optimized/campaigns5-0fc66db-480.webp" alt="Community service event" loading="lazy" decoding="async" class="" width="800" height="600"></div>
+    <div class="story-hero-inner">
+      <span class="story-eyebrow">A living legacy of service</span>
+      <h1 id="hero-title">From Roots to<br>Branches of Hope</h1>
+      <p>A journey of naturopathy, yoga and social welfare in Durg, growing from the work of Shree Sahaj Naturopathy &amp; Yoga Center into a wider commitment to serving humanity.</p>
+      <div class="story-tags"><span>Roots since 2010</span><span>Community &amp; wellbeing</span><span>Foundation incorporated 2026</span></div>
     </div>
   </section>
 
-  <!-- Timeline -->
-  <section class="py-16 px-6 bg-green-50">
-    <div class="max-w-4xl mx-auto relative">
-      <div class="timeline-line"></div>
+  <!-- UPDATEABLE RECENT HIGHLIGHTS: edit/replace these four image cards whenever newer verified events are available. -->
+  <section id="recent-highlights" class="story-section recent-highlights" aria-labelledby="recent-title">
+    <div class="section-heading">
+      <span class="story-eyebrow">The work continues</span>
+      <h2 id="recent-title">Recent Highlights</h2>
+      <p>Scenes from our 2026 community programme at Sneh Sampada Vidyalaya, Bhilai, reflecting participation, care and an ongoing commitment to welfare.</p>
+    </div>
+    <div class="recent-grid">
+      <a href="images/legacy/recent-camp-2026-1.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 1">
+<img src="images/legacy/recent-camp-2026-1.webp" alt="A moment together at the 2026 welfare programme" loading="eager" decoding="async" class="" width="800" height="600">
+<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Community gathering</span>
+</a> <a href="images/legacy/recent-camp-2026-2.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 2">
+<img src="images/legacy/recent-camp-2026-2.webp" alt="Participation and celebration at the school" loading="lazy" decoding="async" class="" width="800" height="600">
+<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Independence Day activities</span>
+</a> <a href="images/legacy/recent-camp-2026-3.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 3">
+<img src="images/legacy/recent-camp-2026-3.webp" alt="Visitors and students joining the activities" loading="lazy" decoding="async" class="" width="800" height="600">
+<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Community outreach</span>
+</a> <a href="images/legacy/recent-camp-2026-4.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 4">
+<img src="images/legacy/recent-camp-2026-4.webp" alt="Supporters and participants at the programme" loading="lazy" decoding="async" class="" width="800" height="600">
+<span class="recent-caption"><span class="recent-label">2026 recent activity</span>A shared commitment</span>
+</a>
+    </div>
+    <p class="recent-note">To feature a future programme, replace the four photo cards in this clearly marked section.</p>
+  </section>
 
-      <div class="space-y-16">
+  <section id="photo-stories" class="story-section archive-story" aria-labelledby="archive-title">
+    <div class="section-heading"><span class="story-eyebrow">The former Gallery, now part of our story</span>
+      <h2 id="archive-title">Portraits of Community Service</h2>
+      <p>Photographs from the earlier Gallery are organized by activity. Where an event date is not independently established, images are presented without assigning them to a year.</p>
+    </div>
+    <div class="archive-stack"><details class="archive-group" open>
+  <summary>Naturopathy activities <span>6 photographs <span aria-hidden="true">⌄</span></span></summary>
+  <div class="archive-photos"><a href="images/optimized/naturopathyday1-c728eb3-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Natural wellness gathering"><img src="images/optimized/naturopathyday1-c728eb3-480.webp" alt="Natural wellness gathering" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/naturopathyday2-e53e4ff-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Naturopathy activity"><img src="images/optimized/naturopathyday2-e53e4ff-480.webp" alt="Naturopathy activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/naturopathyday3-4bad293-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: A moment from naturopathy awareness"><img src="images/optimized/naturopathyday3-4bad293-480.webp" alt="A moment from naturopathy awareness" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/naturopathyday4-3afd574-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Group at a wellness event"><img src="images/optimized/naturopathyday4-3afd574-480.webp" alt="Group at a wellness event" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/naturopathyday5-e0da656-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Naturopathy outreach"><img src="images/optimized/naturopathyday5-e0da656-480.webp" alt="Naturopathy outreach" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/naturopathyday7-490d3f1-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: People participating in a wellness programme"><img src="images/optimized/naturopathyday7-490d3f1-480.webp" alt="People participating in a wellness programme" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
+</details> <details class="archive-group" >
+  <summary>Yoga and participation <span>3 photographs <span aria-hidden="true">⌄</span></span></summary>
+  <div class="archive-photos"><a href="images/optimized/yogaday1-905e5e1-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Group yoga activity"><img src="images/optimized/yogaday1-905e5e1-480.webp" alt="Group yoga activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/yogaday2-0c0caf8-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community yoga programme"><img src="images/optimized/yogaday2-0c0caf8-480.webp" alt="Community yoga programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/yogaday3-c5ed44a-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Participants practicing yoga"><img src="images/optimized/yogaday3-c5ed44a-480.webp" alt="Participants practicing yoga" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
+</details> <details class="archive-group" >
+  <summary>Blood donation and service <span>6 photographs <span aria-hidden="true">⌄</span></span></summary>
+  <div class="archive-photos"><a href="images/optimized/bcampaigns1-bacc838-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Blood donation community event"><img src="images/optimized/bcampaigns1-bacc838-480.webp" alt="Blood donation community event" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/bcampaigns2-35fbfe2-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Volunteer participation at a campaign"><img src="images/optimized/bcampaigns2-35fbfe2-480.webp" alt="Volunteer participation at a campaign" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/bcampaigns3-8d7499c-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Blood donation awareness activity"><img src="images/optimized/bcampaigns3-8d7499c-480.webp" alt="Blood donation awareness activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/bcampaigns5-edb8d45-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: People supporting a welfare programme"><img src="images/optimized/bcampaigns5-edb8d45-480.webp" alt="People supporting a welfare programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/bcampaigns6-9ea07d9-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community health programme"><img src="images/optimized/bcampaigns6-9ea07d9-480.webp" alt="Community health programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/bcampaigns7-2149e51-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Group at a donation event"><img src="images/optimized/bcampaigns7-2149e51-480.webp" alt="Group at a donation event" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
+</details> <details class="archive-group" >
+  <summary>Campaigns and community gatherings <span>12 photographs <span aria-hidden="true">⌄</span></span></summary>
+  <div class="archive-photos"><a href="images/optimized/campaigns1-df83e85-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community outreach gathering"><img src="images/optimized/campaigns1-df83e85-480.webp" alt="Community outreach gathering" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns2-073621b-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Public awareness programme"><img src="images/optimized/campaigns2-073621b-480.webp" alt="Public awareness programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns3-d10d01d-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Participants at a campaign"><img src="images/optimized/campaigns3-d10d01d-480.webp" alt="Participants at a campaign" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns4-9d26983-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: People joining a community initiative"><img src="images/optimized/campaigns4-9d26983-480.webp" alt="People joining a community initiative" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns6-b3e38ce-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Outreach activity"><img src="images/optimized/campaigns6-b3e38ce-480.webp" alt="Outreach activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns7-4e8f7bd-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: A moment of community participation"><img src="images/optimized/campaigns7-4e8f7bd-480.webp" alt="A moment of community participation" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns8-943079c-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community outreach event"><img src="images/optimized/campaigns8-943079c-480.webp" alt="Community outreach event" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns9-81e8b5b-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Public programme"><img src="images/optimized/campaigns9-81e8b5b-480.webp" alt="Public programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns10-707825b-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Event participation"><img src="images/optimized/campaigns10-707825b-480.webp" alt="Event participation" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns11-b05afff-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Awareness and outreach activity"><img src="images/optimized/campaigns11-b05afff-480.webp" alt="Awareness and outreach activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns12-d348130-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: An activity at a local campaign"><img src="images/optimized/campaigns12-d348130-480.webp" alt="An activity at a local campaign" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/campaigns13-17d7c25-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Group gathered for an outreach event"><img src="images/optimized/campaigns13-17d7c25-480.webp" alt="Group gathered for an outreach event" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
+</details> <details class="archive-group" >
+  <summary>Women’s programmes <span>7 photographs <span aria-hidden="true">⌄</span></span></summary>
+  <div class="archive-photos"><a href="images/optimized/womenday1-d8ec0bd-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Women’s Day gathering"><img src="images/optimized/womenday1-d8ec0bd-480.webp" alt="Women’s Day gathering" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/womenday2-428d7ce-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Participants at a Women’s Day event"><img src="images/optimized/womenday2-428d7ce-480.webp" alt="Participants at a Women’s Day event" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/womenday3-0d79ff6-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community Women’s Day activity"><img src="images/optimized/womenday3-0d79ff6-480.webp" alt="Community Women’s Day activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/womenday1-26-3246eec-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Women’s programme photograph from 2026"><img src="images/optimized/womenday1-26-3246eec-480.webp" alt="Women’s programme photograph from 2026" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/womenday2-26-a3ebae9-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community participants in 2026"><img src="images/optimized/womenday2-26-a3ebae9-480.webp" alt="Community participants in 2026" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/womenday3-26-f2e70c5-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Women’s programme in 2026"><img src="images/optimized/womenday3-26-f2e70c5-480.webp" alt="Women’s programme in 2026" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/optimized/womenday4-26-8b886b9-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Gathering for a 2026 Women’s Day programme"><img src="images/optimized/womenday4-26-8b886b9-480.webp" alt="Gathering for a 2026 Women’s Day programme" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
+</details></div>
+  </section>
 
-        <!-- 2010 -->
-        <div class="relative md:grid md:grid-cols-2 md:gap-10 items-center">
-          <div class="timeline-dot" style="top: 6px;"></div>
-          <div class="pl-10 md:pl-0 md:pr-10 md:text-right">
-            <p class="text-green-700 font-semibold text-sm mb-1">2010</p>
-            <h2 class="text-2xl font-bold text-green-800 mb-2">A Center Is Founded</h2>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Dr. Nirmala Gupta opens Shree Sahaj Naturopathy & Yoga Center in Durg, Chhattisgarh, with a simple purpose — to serve people through nature's own methods of healing.
-            </p>
-          </div>
-          <div class="pl-10 md:pl-10 mt-4 md:mt-0">
-            <img src="images/doctor_placeholder.jpg" alt="Dr. Nirmala Gupta, founder" class="rounded-lg shadow-md w-full max-w-sm mx-auto md:mx-0">
-          </div>
-        </div>
-
-        <!-- Growing Years -->
-        <div class="relative md:grid md:grid-cols-2 md:gap-10 items-center">
-          <div class="timeline-dot" style="top: 6px;"></div>
-          <div class="pl-10 md:pl-0 md:pr-10 md:order-2 md:text-left">
-            <p class="text-green-700 font-semibold text-sm mb-1">2011 – 2020</p>
-            <h2 class="text-2xl font-bold text-green-800 mb-2">Growing Roots</h2>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Over the next decade, the center's offerings grow — hydrotherapy, mud therapy, yoga sessions, acupressure, and physiotherapy — alongside community participation in International Yoga Day, National Naturopathy Day, and local health campaigns.
-            </p>
-          </div>
-          <div class="pl-10 md:pl-10 md:order-1 md:pr-10 mt-4 md:mt-0">
-            <img src="images/naturopathyday1.jpg" alt="Naturopathy Day celebration" class="rounded-lg shadow-md w-full max-w-sm mx-auto md:ml-auto">
-          </div>
-        </div>
-
-        <!-- Community Engagement -->
-        <div class="relative md:grid md:grid-cols-2 md:gap-10 items-center">
-          <div class="timeline-dot" style="top: 6px;"></div>
-          <div class="pl-10 md:pl-0 md:pr-10 md:text-right">
-            <p class="text-green-700 font-semibold text-sm mb-1">Ongoing</p>
-            <h2 class="text-2xl font-bold text-green-800 mb-2">Reaching the Community</h2>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Women's Day celebrations, blood donation drives, and awareness campaigns become a regular part of our work — carrying the belief that wellness is something to be shared, not kept within four walls.
-            </p>
-          </div>
-          <div class="pl-10 md:pl-10 mt-4 md:mt-0">
-            <img src="images/BCampaigns1.jpg" alt="Blood donation campaign" class="rounded-lg shadow-md w-full max-w-sm mx-auto md:mx-0">
-          </div>
-        </div>
-
-        <!-- 2026 -->
-        <div class="relative md:grid md:grid-cols-2 md:gap-10 items-center">
-          <div class="timeline-dot" style="top: 6px;"></div>
-          <div class="pl-10 md:pl-0 md:pr-10 md:order-2 md:text-left">
-            <p class="text-green-700 font-semibold text-sm mb-1">2026</p>
-            <h2 class="text-2xl font-bold text-green-800 mb-2">Shree Sahaj Nature Cure Foundation Is Born</h2>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Sixteen years after that first center opened its doors, the mission is formally incorporated as Shree Sahaj Nature Cure Foundation — a Section&nbsp;8 company registered to carry the work of natural healing further into the community, education, and outreach, while our original clinic, Shree Sahaj Naturopathy & Yoga Center (MSME Registered), continues its everyday practice.
-            </p>
-          </div>
-          <div class="pl-10 md:pl-10 md:order-1 md:pr-10 mt-4 md:mt-0">
-            <img src="images/Brand Logo.jpg" alt="Shree Sahaj Nature Cure Foundation logo" class="rounded-lg shadow-md w-full max-w-xs mx-auto md:ml-auto bg-white p-6">
-          </div>
-        </div>
-
-        <!-- Present -->
-        <div class="relative md:grid md:grid-cols-2 md:gap-10 items-center">
-          <div class="timeline-dot" style="top: 6px;"></div>
-          <div class="pl-10 md:pl-0 md:pr-10 md:text-right">
-            <p class="text-green-700 font-semibold text-sm mb-1">Today</p>
-            <h2 class="text-2xl font-bold text-green-800 mb-2">Two Units, One Mission</h2>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Today, the Foundation and the clinic work side by side — one delivering day-to-day naturopathy, yoga, and wellness services at nominal charges, the other carrying that same spirit into health camps, awareness programs, and the wider community.
-            </p>
-          </div>
-          <div class="pl-10 md:pl-10 mt-4 md:mt-0">
-            <img src="images/about_soothing.jpg" alt="Present day at the center" class="rounded-lg shadow-md w-full max-w-sm mx-auto md:mx-0">
-          </div>
-        </div>
-
+  <section id="history" class="story-section tree-story" aria-labelledby="timeline-title">
+    <div class="section-heading"><span class="story-eyebrow">Each branch carries a memory</span>
+      <h2 id="timeline-title">A Growing Journey of Service</h2>
+      <p>Follow the tree from its newest branches in 2026 downward through documented activities to the earliest surviving photographs in 2012.</p>
+    </div>
+    <p class="tree-guide">Present → Past · Only years supported by dated photo filenames are illustrated</p>
+    <div class="story-trunk"><article class="chapter " id="year-2026">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2026</span>
+      <h3>The mission grows</h3><p>Yoga, community participation and the new Foundation chapter continue a longer tradition of service. The Foundation was incorporated in 2026.</p></div>
+  <div class="chapter-montage  " aria-label="Photographs from 2026">
+      <a href="images/legacy/yoga-day-2026-1.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge International Yoga Day gathering in 2026"><img src="images/legacy/yoga-day-2026-1.webp" alt="International Yoga Day gathering in 2026" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2026-women-day-3.webp" class="photo-slice photo-slice-2" data-lightbox aria-label="Enlarge Women’s Day community programme in 2026"><img src="images/legacy/2026-women-day-3.webp" alt="Women’s Day community programme in 2026" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/yoga-day-2026-3.webp" class="photo-slice photo-slice-3" data-lightbox aria-label="Enlarge Participants at a 2026 yoga activity"><img src="images/legacy/yoga-day-2026-3.webp" alt="Participants at a 2026 yoga activity" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter " id="year-2025">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2025</span>
+      <h3>Hands joined for public welfare</h3><p>Photographs document awareness activities, naturopathy programmes and blood donation initiatives during the year.</p></div>
+  <div class="chapter-montage  " aria-label="Photographs from 2025">
+      <a href="images/legacy/2025-awareness-camps-1.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge 2025 awareness programme"><img src="images/legacy/2025-awareness-camps-1.webp" alt="2025 awareness programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2025-blood-donation-camp-1.webp" class="photo-slice photo-slice-2" data-lightbox aria-label="Enlarge Blood donation activity in 2025"><img src="images/legacy/2025-blood-donation-camp-1.webp" alt="Blood donation activity in 2025" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2025-naturopathy-day-camp1.webp" class="photo-slice photo-slice-3" data-lightbox aria-label="Enlarge Naturopathy awareness camp in 2025"><img src="images/legacy/2025-naturopathy-day-camp1.webp" alt="Naturopathy awareness camp in 2025" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter " id="year-2024">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2024</span>
+      <h3>Celebrating wellbeing together</h3><p>The available dated archive preserves participation in International Yoga Day activities.</p></div>
+  <div class="chapter-montage chapter-single " aria-label="Photographs from 2024">
+      <a href="images/legacy/2024-yoga-day-1.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge International Yoga Day activity in 2024"><img src="images/legacy/2024-yoga-day-1.webp" alt="International Yoga Day activity in 2024" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter " id="year-2023">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2023</span>
+      <h3>A stronger voice for awareness</h3><p>Community outreach and naturopathy observances brought people together around natural wellness.</p></div>
+  <div class="chapter-montage  " aria-label="Photographs from 2023">
+      <a href="images/legacy/2023-awareness-camps-2.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge 2023 community awareness outreach"><img src="images/legacy/2023-awareness-camps-2.webp" alt="2023 community awareness outreach" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2023-naturopathy-day-2.webp" class="photo-slice photo-slice-2" data-lightbox aria-label="Enlarge Naturopathy Day in 2023"><img src="images/legacy/2023-naturopathy-day-2.webp" alt="Naturopathy Day in 2023" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2023-awareness-camps-6.webp" class="photo-slice photo-slice-3" data-lightbox aria-label="Enlarge A gathering during the 2023 awareness campaigns"><img src="images/legacy/2023-awareness-camps-6.webp" alt="A gathering during the 2023 awareness campaigns" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter " id="year-2022">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2022</span>
+      <h3>Learning and sharing natural care</h3><p>Naturopathy camps, Women’s Day gatherings and yoga activities are reflected in photographs from this year.</p></div>
+  <div class="chapter-montage  " aria-label="Photographs from 2022">
+      <a href="images/legacy/2022-naturopathy-day-camp4.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge 2022 naturopathy camp"><img src="images/legacy/2022-naturopathy-day-camp4.webp" alt="2022 naturopathy camp" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2022-women-day-2.webp" class="photo-slice photo-slice-2" data-lightbox aria-label="Enlarge Women’s Day programme in 2022"><img src="images/legacy/2022-women-day-2.webp" alt="Women’s Day programme in 2022" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/yoga-day-2022-2.webp" class="photo-slice photo-slice-3" data-lightbox aria-label="Enlarge Yoga activity in 2022"><img src="images/legacy/yoga-day-2022-2.webp" alt="Yoga activity in 2022" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter " id="year-2021">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2021</span>
+      <h3>The work continues</h3><p>The historical archive records naturopathy observances and programmes supporting community awareness.</p></div>
+  <div class="chapter-montage  " aria-label="Photographs from 2021">
+      <a href="images/legacy/2021-naturopathy-day-1.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge Naturopathy Day observation in 2021"><img src="images/legacy/2021-naturopathy-day-1.webp" alt="Naturopathy Day observation in 2021" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2021-women-day-1.webp" class="photo-slice photo-slice-2" data-lightbox aria-label="Enlarge Women’s Day outreach activity in 2021"><img src="images/legacy/2021-women-day-1.webp" alt="Women’s Day outreach activity in 2021" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2021-naturopathy-day-3.webp" class="photo-slice photo-slice-3" data-lightbox aria-label="Enlarge Another moment from the 2021 naturopathy event"><img src="images/legacy/2021-naturopathy-day-3.webp" alt="Another moment from the 2021 naturopathy event" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter " id="year-2020">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2020</span>
+      <h3>Commitment in difficult times</h3><p>COVID-era kadha awareness outreach at District Court, Durg, appears alongside wellness and community activities.</p></div>
+  <div class="chapter-montage  " aria-label="Photographs from 2020">
+      <a href="images/legacy/2020-covid-khadha-camp-at-district-court-durg.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge 2020 kadha awareness programme at District Court, Durg"><img src="images/legacy/2020-covid-khadha-camp-at-district-court-durg.webp" alt="2020 kadha awareness programme at District Court, Durg" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2020-women-day-3.webp" class="photo-slice photo-slice-2" data-lightbox aria-label="Enlarge Women’s Day programme in 2020"><img src="images/legacy/2020-women-day-3.webp" alt="Women’s Day programme in 2020" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/yoga-day-2020-2.webp" class="photo-slice photo-slice-3" data-lightbox aria-label="Enlarge Community yoga activity in 2020"><img src="images/legacy/yoga-day-2020-2.webp" alt="Community yoga activity in 2020" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter " id="year-2019">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2019</span>
+      <h3>Participation becomes a tradition</h3><p>Photographs of International Yoga Day reflect the earlier centre’s engagement with group wellness activities.</p></div>
+  <div class="chapter-montage  " aria-label="Photographs from 2019">
+      <a href="images/legacy/yoga-day-2019-1.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge International Yoga Day 2019"><img src="images/legacy/yoga-day-2019-1.webp" alt="International Yoga Day 2019" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/yoga-day-2019-4.webp" class="photo-slice photo-slice-2" data-lightbox aria-label="Enlarge Participants at Yoga Day 2019"><img src="images/legacy/yoga-day-2019-4.webp" alt="Participants at Yoga Day 2019" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/yoga-day-2019-8.webp" class="photo-slice photo-slice-3" data-lightbox aria-label="Enlarge Another part of the 2019 yoga programme"><img src="images/legacy/yoga-day-2019-8.webp" alt="Another part of the 2019 yoga programme" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter " id="year-2015">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2015</span>
+      <h3>Early community connections</h3><p>A Women’s Day photograph documents another chapter of the centre’s outreach and participation.</p></div>
+  <div class="chapter-montage chapter-single " aria-label="Photographs from 2015">
+      <a href="images/legacy/women-day-2015.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge Women’s Day gathering in 2015"><img src="images/legacy/women-day-2015.webp" alt="Women’s Day gathering in 2015" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article> <article class="chapter chapter-roots" id="year-2012">
+  <span class="chapter-node" aria-hidden="true">✦</span>
+  <div class="chapter-copy"><span class="chapter-year">2012</span>
+      <h3>Where the roots took hold</h3><p>These are among the earliest dated photographs in the archive. The original Shree Sahaj Naturopathy &amp; Yoga Center began its journey in 2010, before the Foundation was incorporated in 2026.</p></div>
+  <div class="chapter-montage  chapter-duo" aria-label="Photographs from 2012">
+      <a href="images/legacy/2012-1.webp" class="photo-slice photo-slice-1" data-lightbox aria-label="Enlarge Early community gathering photographed in 2012"><img src="images/legacy/2012-1.webp" alt="Early community gathering photographed in 2012" loading="lazy" decoding="async" class="" width="800" height="600"></a>
+<a href="images/legacy/2012-2.webp" class="photo-slice photo-slice-2" data-lightbox aria-label="Enlarge Community members photographed in 2012"><img src="images/legacy/2012-2.webp" alt="Community members photographed in 2012" loading="lazy" decoding="async" class="" width="800" height="600"></a><span class="chapter-photo-sheen" aria-hidden="true"></span></div>
+</article></div>
+    <div class="root-note"><strong>The historical distinction matters:</strong> the earlier centre’s work began in 2010. Shree Sahaj Nature Cure Foundation was incorporated in 2026; earlier events shown here belong to the centre’s preceding history, not to the Foundation as an incorporated company.</div>
+  </section>
+</main>
+<!-- SSNC-SHARED-FOOTER:START -->
+<footer class="ssnc-footer">
+  <div class="ssnc-footer-main">
+    <a class="ssnc-footer-logo-link" href="index.html" aria-label="Return to SSNC Foundation homepage">
+      <img class="ssnc-footer-logo" src="images/optimized/brandlogo-ssnc-fc343c1-480.webp" width="145" height="115" loading="lazy" decoding="async" alt="Shree Sahaj Nature Cure Foundation logo">
+    </a>
+    <h2>SHREE SAHAJ NATURE CURE FOUNDATION</h2>
+    <p class="ssnc-cin">CIN: U86900CT2026NPL020841</p>
+    <address class="ssnc-contact">
+      <p>📍 309, Sadar Bazar, Durg – 491001, Chhattisgarh, India</p>
+      <div class="ssnc-contact-links">
+        <a href="mailto:ssncfoun@gmail.com" aria-label="Email SSNC Foundation">✉ ssncfoun@gmail.com</a>
+        <a href="tel:+917587443583" aria-label="Call SSNC Foundation">☎ +91 75874 43583</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Quote Ribbon -->
-  <section class="relative quote-bg text-white text-center py-24">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <h2 class="relative text-3xl font-semibold max-w-3xl mx-auto drop-shadow-md px-4 z-10">
-      “Every year, every camp, every session has added a thread to a story that began with one simple intention — to heal, naturally.”
-    </h2>
-  </section>
-
-  <!-- Moments Through the Years -->
-  <section class="py-16 px-6 bg-white">
-    <div class="max-w-6xl mx-auto text-center mb-10">
-      <h2 class="text-3xl font-bold text-green-800 mb-3">Moments Through the Years</h2>
-      <p class="text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
-        A glimpse of the campaigns, celebrations, and everyday work that have shaped our journey since 2010. More archival photographs are being added as we digitize our records.
-      </p>
-    </div>
-    <div class="max-w-6xl mx-auto columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
-      <img src="images/naturopathyday2.jpg" alt="Naturopathy Day" class="w-full rounded shadow">
-      <img src="images/womenday1.jpg" alt="Women's Day celebration" class="w-full rounded shadow">
-      <img src="images/yogaday1.jpg" alt="International Yoga Day" class="w-full rounded shadow">
-      <img src="images/Campaigns1.jpg" alt="Community campaign" class="w-full rounded shadow">
-      <img src="images/BCampaigns3.jpg" alt="Blood donation campaign" class="w-full rounded shadow">
-      <img src="images/naturopathyday5.jpg" alt="Naturopathy Day" class="w-full rounded shadow">
-    </div>
-    <div class="text-center mt-8">
-      <a href="gallery.html" class="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 text-sm font-medium">View Full Gallery</a>
-    </div>
-  </section>
-
-  <!-- Testimonials Teaser -->
-  <section class="py-16 px-6 bg-green-50 text-center">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl font-bold text-green-800 mb-4">Stories From Those We've Served</h2>
-      <p class="text-gray-700 text-sm sm:text-base mb-6">
-        Behind every milestone are the people whose lives it touched. We're gathering testimonials from patients who have experienced real change through our services — read a few of their stories, and share your own.
-      </p>
-      <a href="Consultation.html#testimonials" class="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 text-sm font-medium">Read Testimonials</a>
-    </div>
-  </section>
-
-  <!-- Motivational Highlight Section -->
-  <section class="bg-white text-center py-24 px-6">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl font-semibold text-green-800 mb-6">“Let food be thy medicine and medicine be thy food.”</h2>
-      <p class="text-lg">We believe in the power of nature, the wisdom of tradition, and the strength of the inner spirit.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-<footer class="bg-white text-center text-gray-800 mt-0 pt-0">
-
-  <!-- Logo -->
-  <div class="pt-10">
-    <img src="images/Brand Logo.jpg" alt="Logo" class="h-28 mx-auto">
+    </address>
+    <p class="ssnc-story">A journey rooted since 2010. <a href="legacy.html">Read our full story.</a></p>
   </div>
-
-  <!-- Name, Legal Identity & Contact -->
-  <div class="text-base leading-relaxed mt-4 max-w-2xl mx-auto px-4">
-    <p class="text-lg font-semibold text-green-800">Shree Sahaj Nature Cure Foundation</p>
-    <p class="text-xs sm:text-sm text-gray-600 mt-1">CIN: U86900CT2026NPL020841</p>
-    <p class="mt-3">📍 309, Sadar Bazar, Durg – 491001, Chhattisgarh, India</p>
-    <p class="mt-2">
-      <i class="fas fa-envelope mr-1"></i> ssncfoun@gmail.com |
-      <i class="fas fa-mobile-alt ml-2 mr-1 text-red-700"></i> +91 75874 43583
-    </p>
-    <p class="text-xs text-gray-500 mt-3">A journey rooted since 2010. <a href="legacy.html" class="underline hover:text-green-700">Read our full story</a>.</p>
+  <div class="ssnc-footer-art">
+    <img src="images/optimized/sun-salutation1-16afe06-1600.webp" width="1600" height="186" loading="lazy" decoding="async" alt="Decorative silhouettes illustrating yoga poses">
   </div>
-
-  <!-- Social Media Icons -->
-  <div class="flex justify-center gap-6 text-2xl text-gray-800 mt-4">
-    <a href="#" title="Facebook" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" title="Instagram" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
-  </div>
-
-  <!-- 🌅 Image + Copyright: wrapped in brown background -->
-  <div style="background-color: #3a1e0a; margin-top: 0; padding: 0; border-top: none;">
-    <div style="margin: 0; padding: 0; line-height: 0;">
-      <img src="images/sun_salutation1.png" alt="Sun Salutation Footer" style="display: block; width: 100%; height: auto; margin: 0; padding: 0;">
-    </div>
-
-    <div class="text-sm text-white text-center py-4" style="margin: 0; padding: 0">
-      © 2026 Shree Sahaj Nature Cure Foundation. All rights reserved.
-    </div>
-    <div style="background-color: #3a1e0a; height: 10px;"></div>
-  </div>
+  <div class="ssnc-footer-bottom">© 2026 Shree Sahaj Nature Cure Foundation. All rights reserved.</div>
 </footer>
-
-  <!-- Swiper Script -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    new Swiper('.swiper-container', {
-      loop: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      effect: 'fade',
+<!-- SSNC-SHARED-FOOTER:END -->
+<div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged historical photograph" aria-hidden="true">
+  <button type="button" id="photo-close" aria-label="Close enlarged photograph">&times;</button>
+  <figure><img id="photo-view" alt=""><figcaption id="photo-description"></figcaption></figure>
+</div>
+<script>
+(function () {
+  const overlay = document.getElementById('photo-lightbox');
+  const image = document.getElementById('photo-view');
+  const caption = document.getElementById('photo-description');
+  const close = document.getElementById('photo-close');
+  let lastFocus = null;
+  function dismiss() {
+    overlay.setAttribute('aria-hidden', 'true');
+    image.removeAttribute('src');
+    lastFocus?.focus();
+  }
+  document.querySelectorAll('a[data-lightbox]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      lastFocus = link;
+      image.src = link.getAttribute('href');
+      image.alt = link.querySelector('img')?.alt || 'Community event photograph';
+      caption.textContent = image.alt;
+      overlay.setAttribute('aria-hidden', 'false');
+      close.focus();
     });
-  </script>
+  });
+  close.addEventListener('click', dismiss);
+  overlay.addEventListener('click', e => { if (e.target === overlay) dismiss(); });
+  document.addEventListener('keydown', e => {
+    if (overlay.getAttribute('aria-hidden') === 'false') {
+      if (e.key === 'Escape') dismiss();
+      if (e.key === 'Tab') { e.preventDefault(); close.focus(); }
+    }
+  });
+})();
+</script>
 </body>
 </html>

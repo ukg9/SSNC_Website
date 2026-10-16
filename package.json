@@ -1,0 +1,12 @@
+{
+  "name": "ssnc-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static-site production CSS build for SSNC Foundation",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.cjs -i assets/tailwind-input.css -o assets/site.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
