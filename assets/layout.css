@@ -95,3 +95,11 @@ body { min-width: 0; overflow-x: clip; }
   }
 
 }
+
+
+/* Move logo and foundation name right on wide desktops only */
+@media (min-width: 1600px) {
+  .ssnc-header-inner > .ssnc-brand {
+    margin-left: 180px !important;
+  }
+}
