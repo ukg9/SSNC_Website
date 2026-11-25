@@ -140,9 +140,10 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
 
 
 /* Legacy-only compact spacing and consistent photo thumbnails. */
-.story-hero { padding-bottom:clamp(1.4rem,3vw,2.5rem); }
+.story-hero { padding-top:.65rem; padding-bottom:clamp(1.4rem,3vw,2.5rem); }
 .story-section.recent-highlights { padding-block:clamp(1.3rem,2.5vw,2rem); }
-.story-section.archive-story { padding-block:clamp(1.6rem,3vw,2.6rem); }
+.story-section.archive-story { padding-block:clamp(1.6rem,3vw,2.6rem) .65rem; }
+.story-section.tree-story { padding-top:.65rem; padding-bottom:.65rem; }
 .recent-highlights .section-heading,.archive-story .section-heading { margin-bottom:1.25rem; }
 .recent-grid,.archive-photos { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-template-rows:none; grid-auto-rows:auto; }
 .recent-card,.archive-photo { aspect-ratio:4/3; height:auto; min-width:0; }
