@@ -138,6 +138,27 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after { transition-duration:.01ms!important; scroll-behavior:auto!important; }}
 
+
+/* Legacy-only compact spacing and always-visible, balanced photo rows. */
+.story-hero { padding-bottom:clamp(1.4rem,3vw,2.5rem); }
+.story-section.recent-highlights { padding-block:clamp(1.3rem,2.5vw,2rem); }
+.story-section.archive-story { padding-block:clamp(1.6rem,3vw,2.6rem); }
+.recent-highlights .section-heading,.archive-story .section-heading { margin-bottom:1.25rem; }
+.recent-grid { display:flex; flex-wrap:wrap; gap:12px; }
+.recent-card { flex:1 1 23%; min-width:0; height:clamp(170px,22vw,270px); }
+.recent-empty { width:100%; text-align:center; color:#58725c; font-size:.94rem; padding:.65rem 0; }
+.archive-group-heading { padding:.9rem 1.1rem .65rem; display:flex; align-items:center; justify-content:space-between; gap:.75rem; color:var(--forest); }
+.archive-group-heading h3 { font:700 1rem/1.35 system-ui,sans-serif; letter-spacing:0; margin:0; }
+.archive-group-heading span { font-size:.8rem; color:#59755b; white-space:nowrap; }
+.archive-photos { display:flex; flex-wrap:wrap; gap:.55rem; padding:.3rem .85rem .85rem; }
+.archive-photo { flex:1 1 23%; min-width:0; height:clamp(155px,17vw,240px); aspect-ratio:auto; }
+.archive-photo:first-child:nth-last-child(6),.archive-photo:first-child:nth-last-child(6) ~ .archive-photo,.archive-photo:first-child:nth-last-child(3),.archive-photo:first-child:nth-last-child(3) ~ .archive-photo { flex-basis:30%; }
+@media(max-width:760px){
+  .recent-card,.archive-photo,.archive-photo:first-child:nth-last-child(6),.archive-photo:first-child:nth-last-child(6) ~ .archive-photo,.archive-photo:first-child:nth-last-child(3),.archive-photo:first-child:nth-last-child(3) ~ .archive-photo { flex-basis:45%; height:clamp(130px,32vw,205px); }
+  .archive-group-heading { padding:.8rem .85rem .55rem; }
+  .archive-group-heading h3 { font-size:.93rem; }
+}
+
   </style>
   <link rel="stylesheet" href="assets/mobile.css">
 </head>
@@ -188,29 +209,23 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
     </div>
   </section>
 
-  <!-- UPDATEABLE RECENT HIGHLIGHTS: edit/replace these four image cards whenever newer verified events are available. -->
+  <!-- RECENT HIGHLIGHTS: Add only verified SSNC-organised or hosted programmes.
+       Upload web-optimised images to images/legacy/ and insert one recent-card per photograph.
+       Example:
+       <a href="images/legacy/your-event.webp" class="recent-card" data-lightbox>
+         <img src="images/legacy/your-event.webp" alt="Describe the photograph" loading="lazy" decoding="async">
+         <span class="recent-caption"><span class="recent-label">Programme date</span>Programme title</span>
+       </a>
+       Remove the recent-empty paragraph once photographs are added. No fixed photo limit. -->
   <section id="recent-highlights" class="story-section recent-highlights" aria-labelledby="recent-title">
     <div class="section-heading">
       <span class="story-eyebrow">The work continues</span>
       <h2 id="recent-title">Recent Highlights</h2>
-      <p>Scenes from our 2026 community programme at Sneh Sampada Vidyalaya, Bhilai, reflecting participation, care and an ongoing commitment to welfare.</p>
+      <p>A glimpse into recent programmes and initiatives by SSNC Foundation, promoting naturopathy, yoga, community wellbeing and social welfare.</p>
     </div>
     <div class="recent-grid">
-      <a href="images/legacy/recent-camp-2026-1.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 1">
-<img src="images/legacy/recent-camp-2026-1.webp" alt="A moment together at the 2026 welfare programme" loading="eager" decoding="async" class="" width="800" height="600">
-<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Community gathering</span>
-</a> <a href="images/legacy/recent-camp-2026-2.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 2">
-<img src="images/legacy/recent-camp-2026-2.webp" alt="Participation and celebration at the school" loading="lazy" decoding="async" class="" width="800" height="600">
-<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Independence Day activities</span>
-</a> <a href="images/legacy/recent-camp-2026-3.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 3">
-<img src="images/legacy/recent-camp-2026-3.webp" alt="Visitors and students joining the activities" loading="lazy" decoding="async" class="" width="800" height="600">
-<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Community outreach</span>
-</a> <a href="images/legacy/recent-camp-2026-4.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 4">
-<img src="images/legacy/recent-camp-2026-4.webp" alt="Supporters and participants at the programme" loading="lazy" decoding="async" class="" width="800" height="600">
-<span class="recent-caption"><span class="recent-label">2026 recent activity</span>A shared commitment</span>
-</a>
+      <p class="recent-empty">Photographs of upcoming and recent Foundation programmes will be featured here.</p>
     </div>
-    <p class="recent-note">To feature a future programme, replace the four photo cards in this clearly marked section.</p>
   </section>
 
   <section id="photo-stories" class="story-section archive-story" aria-labelledby="archive-title">
@@ -218,29 +233,29 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
       <h2 id="archive-title">Portraits of Community Service</h2>
       <p>Photographs from the earlier Gallery are organized by activity. Where an event date is not independently established, images are presented without assigning them to a year.</p>
     </div>
-    <div class="archive-stack"><details class="archive-group" open>
-  <summary>Naturopathy activities <span>6 photographs <span aria-hidden="true">⌄</span></span></summary>
+    <div class="archive-stack"><section class="archive-group" aria-labelledby="archive-group-1">
+  <div class="archive-group-heading"><h3 id="archive-group-1">Naturopathy activities</h3><span>6 photographs</span></div>
   <div class="archive-photos"><a href="images/optimized/naturopathyday1-c728eb3-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Natural wellness gathering"><img src="images/optimized/naturopathyday1-c728eb3-480.webp" alt="Natural wellness gathering" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/naturopathyday2-e53e4ff-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Naturopathy activity"><img src="images/optimized/naturopathyday2-e53e4ff-480.webp" alt="Naturopathy activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/naturopathyday3-4bad293-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: A moment from naturopathy awareness"><img src="images/optimized/naturopathyday3-4bad293-480.webp" alt="A moment from naturopathy awareness" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/naturopathyday4-3afd574-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Group at a wellness event"><img src="images/optimized/naturopathyday4-3afd574-480.webp" alt="Group at a wellness event" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/naturopathyday5-e0da656-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Naturopathy outreach"><img src="images/optimized/naturopathyday5-e0da656-480.webp" alt="Naturopathy outreach" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/naturopathyday7-490d3f1-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: People participating in a wellness programme"><img src="images/optimized/naturopathyday7-490d3f1-480.webp" alt="People participating in a wellness programme" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
-</details> <details class="archive-group" >
-  <summary>Yoga and participation <span>3 photographs <span aria-hidden="true">⌄</span></span></summary>
+</section> <section class="archive-group" aria-labelledby="archive-group-2">
+  <div class="archive-group-heading"><h3 id="archive-group-2">Yoga and participation</h3><span>3 photographs</span></div>
   <div class="archive-photos"><a href="images/optimized/yogaday1-905e5e1-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Group yoga activity"><img src="images/optimized/yogaday1-905e5e1-480.webp" alt="Group yoga activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/yogaday2-0c0caf8-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community yoga programme"><img src="images/optimized/yogaday2-0c0caf8-480.webp" alt="Community yoga programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/yogaday3-c5ed44a-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Participants practicing yoga"><img src="images/optimized/yogaday3-c5ed44a-480.webp" alt="Participants practicing yoga" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
-</details> <details class="archive-group" >
-  <summary>Blood donation and service <span>6 photographs <span aria-hidden="true">⌄</span></span></summary>
+</section> <section class="archive-group" aria-labelledby="archive-group-3">
+  <div class="archive-group-heading"><h3 id="archive-group-3">Blood donation and service</h3><span>6 photographs</span></div>
   <div class="archive-photos"><a href="images/optimized/bcampaigns1-bacc838-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Blood donation community event"><img src="images/optimized/bcampaigns1-bacc838-480.webp" alt="Blood donation community event" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/bcampaigns2-35fbfe2-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Volunteer participation at a campaign"><img src="images/optimized/bcampaigns2-35fbfe2-480.webp" alt="Volunteer participation at a campaign" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/bcampaigns3-8d7499c-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Blood donation awareness activity"><img src="images/optimized/bcampaigns3-8d7499c-480.webp" alt="Blood donation awareness activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/bcampaigns5-edb8d45-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: People supporting a welfare programme"><img src="images/optimized/bcampaigns5-edb8d45-480.webp" alt="People supporting a welfare programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/bcampaigns6-9ea07d9-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community health programme"><img src="images/optimized/bcampaigns6-9ea07d9-480.webp" alt="Community health programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/bcampaigns7-2149e51-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Group at a donation event"><img src="images/optimized/bcampaigns7-2149e51-480.webp" alt="Group at a donation event" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
-</details> <details class="archive-group" >
-  <summary>Campaigns and community gatherings <span>12 photographs <span aria-hidden="true">⌄</span></span></summary>
+</section> <section class="archive-group" aria-labelledby="archive-group-4">
+  <div class="archive-group-heading"><h3 id="archive-group-4">Campaigns and community gatherings</h3><span>12 photographs</span></div>
   <div class="archive-photos"><a href="images/optimized/campaigns1-df83e85-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community outreach gathering"><img src="images/optimized/campaigns1-df83e85-480.webp" alt="Community outreach gathering" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/campaigns2-073621b-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Public awareness programme"><img src="images/optimized/campaigns2-073621b-480.webp" alt="Public awareness programme" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/campaigns3-d10d01d-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Participants at a campaign"><img src="images/optimized/campaigns3-d10d01d-480.webp" alt="Participants at a campaign" loading="lazy" decoding="async" class="" width="800" height="600"></a>
@@ -253,8 +268,8 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
 <a href="images/optimized/campaigns11-b05afff-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Awareness and outreach activity"><img src="images/optimized/campaigns11-b05afff-480.webp" alt="Awareness and outreach activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/campaigns12-d348130-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: An activity at a local campaign"><img src="images/optimized/campaigns12-d348130-480.webp" alt="An activity at a local campaign" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/campaigns13-17d7c25-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Group gathered for an outreach event"><img src="images/optimized/campaigns13-17d7c25-480.webp" alt="Group gathered for an outreach event" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
-</details> <details class="archive-group" >
-  <summary>Women’s programmes <span>7 photographs <span aria-hidden="true">⌄</span></span></summary>
+</section> <section class="archive-group" aria-labelledby="archive-group-5">
+  <div class="archive-group-heading"><h3 id="archive-group-5">Women’s programmes</h3><span>7 photographs</span></div>
   <div class="archive-photos"><a href="images/optimized/womenday1-d8ec0bd-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Women’s Day gathering"><img src="images/optimized/womenday1-d8ec0bd-480.webp" alt="Women’s Day gathering" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/womenday2-428d7ce-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Participants at a Women’s Day event"><img src="images/optimized/womenday2-428d7ce-480.webp" alt="Participants at a Women’s Day event" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/womenday3-0d79ff6-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community Women’s Day activity"><img src="images/optimized/womenday3-0d79ff6-480.webp" alt="Community Women’s Day activity" loading="lazy" decoding="async" class="" width="800" height="600"></a>
@@ -262,7 +277,7 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
 <a href="images/optimized/womenday2-26-a3ebae9-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Community participants in 2026"><img src="images/optimized/womenday2-26-a3ebae9-480.webp" alt="Community participants in 2026" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/womenday3-26-f2e70c5-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Women’s programme in 2026"><img src="images/optimized/womenday3-26-f2e70c5-480.webp" alt="Women’s programme in 2026" loading="lazy" decoding="async" class="" width="800" height="600"></a>
 <a href="images/optimized/womenday4-26-8b886b9-480.webp" class="archive-photo" data-lightbox aria-label="Enlarge photograph: Gathering for a 2026 Women’s Day programme"><img src="images/optimized/womenday4-26-8b886b9-480.webp" alt="Gathering for a 2026 Women’s Day programme" loading="lazy" decoding="async" class="" width="800" height="600"></a></div>
-</details></div>
+</section></div>
   </section>
 
   <section id="history" class="story-section tree-story" aria-labelledby="timeline-title">
