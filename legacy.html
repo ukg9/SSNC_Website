@@ -139,22 +139,21 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
 @media(prefers-reduced-motion:reduce){*,*::before,*::after { transition-duration:.01ms!important; scroll-behavior:auto!important; }}
 
 
-/* Legacy-only compact spacing and always-visible, balanced photo rows. */
+/* Legacy-only compact spacing and consistent photo thumbnails. */
 .story-hero { padding-bottom:clamp(1.4rem,3vw,2.5rem); }
 .story-section.recent-highlights { padding-block:clamp(1.3rem,2.5vw,2rem); }
 .story-section.archive-story { padding-block:clamp(1.6rem,3vw,2.6rem); }
 .recent-highlights .section-heading,.archive-story .section-heading { margin-bottom:1.25rem; }
-.recent-grid { display:flex; flex-wrap:wrap; gap:12px; }
-.recent-card { flex:1 1 23%; min-width:0; height:clamp(170px,22vw,270px); }
-.recent-empty { width:100%; text-align:center; color:#58725c; font-size:.94rem; padding:.65rem 0; }
+.recent-grid,.archive-photos { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-template-rows:none; grid-auto-rows:auto; }
+.recent-card,.archive-photo { aspect-ratio:4/3; height:auto; min-width:0; }
+.recent-card:first-child,.recent-card:nth-child(4) { grid-row:auto; grid-column:auto; }
+.recent-card img,.archive-photo img { object-fit:cover; }
 .archive-group-heading { padding:.9rem 1.1rem .65rem; display:flex; align-items:center; justify-content:space-between; gap:.75rem; color:var(--forest); }
 .archive-group-heading h3 { font:700 1rem/1.35 system-ui,sans-serif; letter-spacing:0; margin:0; }
 .archive-group-heading span { font-size:.8rem; color:#59755b; white-space:nowrap; }
-.archive-photos { display:flex; flex-wrap:wrap; gap:.55rem; padding:.3rem .85rem .85rem; }
-.archive-photo { flex:1 1 23%; min-width:0; height:clamp(155px,17vw,240px); aspect-ratio:auto; }
-.archive-photo:first-child:nth-last-child(6),.archive-photo:first-child:nth-last-child(6) ~ .archive-photo,.archive-photo:first-child:nth-last-child(3),.archive-photo:first-child:nth-last-child(3) ~ .archive-photo { flex-basis:30%; }
+.archive-photos { gap:.55rem; padding:.3rem .85rem .85rem; }
 @media(max-width:760px){
-  .recent-card,.archive-photo,.archive-photo:first-child:nth-last-child(6),.archive-photo:first-child:nth-last-child(6) ~ .archive-photo,.archive-photo:first-child:nth-last-child(3),.archive-photo:first-child:nth-last-child(3) ~ .archive-photo { flex-basis:45%; height:clamp(130px,32vw,205px); }
+  .recent-grid,.archive-photos { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .archive-group-heading { padding:.8rem .85rem .55rem; }
   .archive-group-heading h3 { font-size:.93rem; }
 }
@@ -216,7 +215,7 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
          <img src="images/legacy/your-event.webp" alt="Describe the photograph" loading="lazy" decoding="async">
          <span class="recent-caption"><span class="recent-label">Programme date</span>Programme title</span>
        </a>
-       Remove the recent-empty paragraph once photographs are added. No fixed photo limit. -->
+       Add further cards as needed. No fixed photo limit. -->
   <section id="recent-highlights" class="story-section recent-highlights" aria-labelledby="recent-title">
     <div class="section-heading">
       <span class="story-eyebrow">The work continues</span>
@@ -224,7 +223,21 @@ body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:#f8
       <p>A glimpse into recent programmes and initiatives by SSNC Foundation, promoting naturopathy, yoga, community wellbeing and social welfare.</p>
     </div>
     <div class="recent-grid">
-      <p class="recent-empty">Photographs of upcoming and recent Foundation programmes will be featured here.</p>
+      
+      <a href="images/legacy/recent-camp-2026-1.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 1">
+<img src="images/legacy/recent-camp-2026-1.webp" alt="A moment together at the 2026 welfare programme" loading="eager" decoding="async" class="" width="800" height="600">
+<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Community gathering</span>
+</a> <a href="images/legacy/recent-camp-2026-2.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 2">
+<img src="images/legacy/recent-camp-2026-2.webp" alt="Participation and celebration at the welfare programme" loading="lazy" decoding="async" class="" width="800" height="600">
+<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Independence Day activities</span>
+</a> <a href="images/legacy/recent-camp-2026-3.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 3">
+<img src="images/legacy/recent-camp-2026-3.webp" alt="Participants joining the welfare activities" loading="lazy" decoding="async" class="" width="800" height="600">
+<span class="recent-caption"><span class="recent-label">2026 recent activity</span>Community outreach</span>
+</a> <a href="images/legacy/recent-camp-2026-4.webp" class="recent-card" data-lightbox aria-label="View recent activity photograph 4">
+<img src="images/legacy/recent-camp-2026-4.webp" alt="Supporters and participants at the programme" loading="lazy" decoding="async" class="" width="800" height="600">
+<span class="recent-caption"><span class="recent-label">2026 recent activity</span>A shared commitment</span>
+</a>
+    
     </div>
   </section>
 
